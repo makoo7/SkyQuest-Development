@@ -27,7 +27,7 @@ class ReportExport implements FromView, WithStyles
     protected $reportexport;
 
     public function __construct($reportexport){
-        $this->reportexport = $reportexport;
+        $this->reportexport = $reportexport;   
     }
 
     public function view(): View
