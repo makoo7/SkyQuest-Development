@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.cmn-pages h1{
+    color: #464C4A;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.313em;
+    font-weight: bold;
+    letter-spacing: 0.39px;
+    line-height:1.563em;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .entry-content p strong{
+    color: #000000;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0;
+    line-height: 1.688em;
+    font-weight: 700;
+  }
+  .entry-content p {
+    color: #000000;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0;
+    line-height: 1.688em;
+    font-weight: 400;
+    margin: 0 0 1em 0;
+  }
+  /* .entry-content p br{
+      display: none;
+  } */
+  .cmn-pages{
+      padding:1.5em 1em;
+  }
+  input[type="text"] {
+    border: 1px solid #BABCBC;
+    border-radius: 24px;
+    background-color: #F8F8F8;
+    width: 100%;
+    display: block;
+    padding: 0 0 0 1em;
+    height: 3.5em;
+}
+.search-input{
+    width: 100% !important;
+}
+.cms-search{
+    display: block;
+    margin: 1.5em 2em 1.5em 0;
+}
+.faqs-content p{
+    color: #68706B;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 22px;
+    border-bottom: 1px solid #D4D4D4;
+    padding-bottom: 1em;
+}
+.faqs-content p:first-child,.faqs-content p:last-child{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.faqs-content p strong{
+    color:#000;
+}
+.search-icon{
+    background-image: url(../images/Search-icon.png);
+    width: 3.8em;
+    height: 3.8em;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    overflow: hidden;
+}
+.search-icon:focus{
+    outline: none;
+}
+
+.search-data{
+    position: relative;
+}
+input[type="text"]:focus{
+    outline: none;
+}
+.search-icon {
+    background-image: url(../images/Search-icon.png);
+    width: 3.7em;
+    height: 3.7em;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: right;
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+    margin: 0;
+    position: absolute;
+    right: -1.05em;
+    top: 50%;
+    transform: translate(0,-50%);
+    overflow: hidden;
+    border-radius: 50%;
+}
