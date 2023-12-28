@@ -5942,6 +5942,16 @@ li.page-item.disabled {
   text-transform: uppercase
 }
 
+.sr-form-row form .form-control[type="button"] {
+  background-color: var(--themeBlue);
+  border-color: var(--themeBlue);
+  height: 60px;
+  font-size: 20px;
+  color: #f8f9fa;
+  font-weight: 300;
+  text-transform: uppercase
+}
+
 .sr-form-row .col2 p {
   font-size: 12px;
   font-family: Georgia;

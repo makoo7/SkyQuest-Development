@@ -56,6 +56,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Log;
 use App\Rules\ScriptPreventRule;
 use Illuminate\Support\Facades\Http;
+use App\Mail\sendEmailOtp;
 
 class ReportController extends Controller
 {
@@ -969,7 +970,6 @@ class ReportController extends Controller
 
     public function saverequestSample(Request $request)
     {
-        dd($request->all());
         $request->validate([
             'name' => ['required', new ScriptPreventRule()],
             'email' => 'required|email:filter',
@@ -1051,6 +1051,27 @@ class ReportController extends Controller
         
         $notification = ['message' => 'Your free sample request has been send successfully!', 'alert-class' => 'success'];
         return redirect()->back()->with($notification);
+    }
+
+    public function sendEmailOtp(Request $request){
+        $email = $request->input('email');
+        if($email){
+            try{
+                $digits = rand(111111, 999999);
+                $data = DB::table('report_email_otp')->where('email', $email)->first();
+                if($data){
+                    DB::table('report_email_otp')
+                    ->where('email', $email)
+                    ->update(['otp' => $digits]);
+                }else{
+                    $data = DB::table('report_email_otp')->insert(['email' => $email, 'otp' => $digits]);
+                }
+                // Mail::to($email)->send(new sendEmailOtp($email,$digits));
+                return response()->json(['success' => 1]);
+            }catch(\Exception $ex){
+                return response()->json(['success' => 0, 'error' => $ex->getMessage()]);
+            }
+        }
     }
 
     public function speakWithAnalyst($slug)

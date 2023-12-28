@@ -99,7 +99,8 @@ $("#frmsamplerequest").validate({
     },
     submitHandler: function (form) {
         showLoader();
-        form.submit();
-        $('.page-loader').show();
+        sendOTPToEmail($(form).find(':input[name="email"]').val());
+        // form.submit();
+        // $('.page-loader').show();
     }
 });

@@ -334,7 +334,78 @@
     </div>
 </section>
 
+<!-- emailOtp-modal -->
+<div class="modal fade payment-modal" id="emailOtpModal" tabindex="-1" role="dialog" aria-labelledby="emailOtpModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="paypal-payment-form-modal">
+                    <div class="card">
+                        <div class="header-wrapper">
+                            {{-- <img src="{!! asset('assets/frontend/images/sq-logo.webp') !!}" alt="sq-logo"/> --}}
+                            <div class="card-details">
+                                <h4 class="text-center">Verification</h4>
+                                <p>&nbsp;</p>
+                                <p class="text-center" style="font-size: 12px;">You will get OTP via Email</p>
+                            </div>
+                        </div>
+                        <div class="body-wrapper">
+                            <div class="form-group">
+                                <input type="text" class="form-control" maxlength="6" required id="otp" placeholder="Enter OTP">
+                            </div>
+                            <br/>
+                            <div class="form-group">
+                                <input class="form-control" type="button" id="verifyOTP" style="background-color: var(--themeBlue);
+                                border-color: var(--themeBlue);
+                                height: 40px;
+                                font-size: 16px;
+                                color: #f8f9fa;
+                                font-weight: 300;
+                                text-transform: uppercase;" value="Verify OTP">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- emailOtp-modal -->
+
 @section('js')
 <script src="{!! asset('assets/frontend/js/pages/samplerequest.js') !!}"></script>
+<script>
+$(document).ready(function(){
+    $("#emailOtpModal").modal('show');
+});
+$(document).on('click', '#verifyOTP', function(){
+    var otp = $("#otp").val().trim();
+    if(otp.length < 6){
+        alert('please enter valid otp');
+    }else{
+        alert(otp);
+    }
+});
+function sendOTPToEmail(email){
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': _token
+        },
+        url: "{{ route('send-email-otp') }}",
+        type: "POST",
+        data: {email: email},
+        success: function (data) {
+            if(data.success == 1){
+                $('#emailOtpModal').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                });
+                $("#emailOtpModal").modal('show');
+            }
+        },
+        error: function(error){}
+    });
+}
+</script>
 @stop
 @endsection

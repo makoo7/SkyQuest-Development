@@ -2,12 +2,12 @@ document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
 }, false);
 
-document.addEventListener("keydown", (e) => {
-    if (e.ctrlKey || e.keyCode == 123) {
-        e.stopPropagation();
-        e.preventDefault();
-    }
-});
+// document.addEventListener("keydown", (e) => {
+//     if (e.ctrlKey || e.keyCode == 123) {
+//         e.stopPropagation();
+//         e.preventDefault();
+//     }
+// });
 
 $(document).bind("ajaxSend", function () {
     $(".page-loader").show();
