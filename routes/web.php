@@ -67,6 +67,8 @@ Route::post('/search', 'HomeController@searchPage')->name('search-detail');
 Route::get('/searchPageList', 'HomeController@searchPageList');
 Route::get('/sitemap1.xml', 'SitemapXmlController@index');
 Route::post('/sendEmailOtp', 'ReportController@sendEmailOtp')->name('send-email-otp');
+Route::post('/verifyEmailOtp', 'ReportController@verifyEmailOtp')->name('verify-email-otp');
+
 
 /* Frontend User Auth Routes */
 Route::get('reset-password/{token}', 'HomeController@index')->middleware('guest')->name('password.reset');

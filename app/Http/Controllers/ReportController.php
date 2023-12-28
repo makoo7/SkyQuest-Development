@@ -1074,6 +1074,25 @@ class ReportController extends Controller
         }
     }
 
+    public function verifyEmailOtp(Request $request){
+        $email = $request->input('email');
+        $otp = $request->input('otp');
+        if($email && $otp)
+        {
+            try
+            {
+                $data = DB::table('report_email_otp')->where(['email' => $email, 'otp' => $otp])->first();
+                if($data){
+                    return response()->json(['success' => 1]);
+                }else{
+                    return response()->json(['success' => 0, 'error' => 'invalid otp']);
+                }
+            }catch(\Exception $ex){
+                return response()->json(['success' => 0, 'error' => $ex->getMessage()]);
+            }
+        }
+    }
+
     public function speakWithAnalyst($slug)
     {
         $report = Report::where('slug',$slug)->where('is_active',1)->first();

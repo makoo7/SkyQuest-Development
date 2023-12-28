@@ -375,15 +375,16 @@
 @section('js')
 <script src="{!! asset('assets/frontend/js/pages/samplerequest.js') !!}"></script>
 <script>
-$(document).ready(function(){
-    $("#emailOtpModal").modal('show');
-});
+// $(document).ready(function(){
+//     $("#emailOtpModal").modal('show');
+// });
 $(document).on('click', '#verifyOTP', function(){
     var otp = $("#otp").val().trim();
     if(otp.length < 6){
         alert('please enter valid otp');
     }else{
-        alert(otp);
+        var email = $("#frmsamplerequest").find(':input[name="email"]').val();
+        verifyOTP({email: email, otp: otp});
     }
 });
 function sendOTPToEmail(email){
@@ -401,6 +402,25 @@ function sendOTPToEmail(email){
                     keyboard: false
                 });
                 $("#emailOtpModal").modal('show');
+            }
+        },
+        error: function(error){}
+    });
+}
+function verifyOTP(obj){
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': _token
+        },
+        url: "{{ route('verify-email-otp') }}",
+        type: "POST",
+        data: obj,
+        success: function (data) {
+            if(data.success == 1){
+                $("#frmsamplerequest").submit();
+            }else{
+                alert(data.error);
+                return false;
             }
         },
         error: function(error){}
