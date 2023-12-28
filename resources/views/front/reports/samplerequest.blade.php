@@ -97,8 +97,9 @@
                 <div class="row sr-form-row mt-md-5 mt-4  mx-auto mb-4">
                     <div class="col-xl-6 col-lg-12 col-md-6 col1">
                         <h6>To request a free sample copy of this report, please complete the form below.</h6>
-                        <form class id="frmsamplerequest" name="frmsamplerequest" method="post"
-                            action="{!! route('request-a-sample') !!}">
+                        {{-- <form class id="frmsamplerequest" name="frmsamplerequest" method="post" --}}
+                            {{-- action="{!! route('request-a-sample') !!}"> --}}
+                            <form class id="frmsamplerequest">
                             @csrf
                             <div class="contct-form row">
                                 <div class="col-12">
@@ -417,11 +418,30 @@ function verifyOTP(obj){
         data: obj,
         success: function (data) {
             if(data.success == 1){
-                $("#frmsamplerequest").submit();
+                sendFinalForm($("#frmsamplerequest").serialize());
             }else{
                 alert(data.error);
                 return false;
             }
+        },
+        error: function(error){}
+    });
+}
+function sendFinalForm(obj){
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': _token
+        },
+        url: "{{ route('request-a-sample') }}",
+        type: "POST",
+        data: obj,
+        success: function (data) {
+            // if(data.success == 1){
+            //     sendFinalForm($("#frmsamplerequest").serialize());
+            // }else{
+            //     alert(data.error);
+            //     return false;
+            // }
         },
         error: function(error){}
     });
