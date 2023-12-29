@@ -68,7 +68,7 @@ Route::get('/searchPageList', 'HomeController@searchPageList');
 Route::get('/sitemap1.xml', 'SitemapXmlController@index');
 Route::post('/sendEmailOtp', 'ReportController@sendEmailOtp')->name('send-email-otp');
 Route::post('/verifyEmailOtp', 'ReportController@verifyEmailOtp')->name('verify-email-otp');
-
+Route::get('/sample-report-page/{slug}', 'ReportController@sampleReportPage')->name('sample-report-page');
 
 /* Frontend User Auth Routes */
 Route::get('reset-password/{token}', 'HomeController@index')->middleware('guest')->name('password.reset');
@@ -429,4 +429,12 @@ Route::get('404', 'HomeController@pagenotfound');
 
 Route::fallback(function () {
     return redirect('404');
+});
+
+Route::get('/test', function(){
+    $report = base64_encode(63);
+    $sampleId = base64_encode(1396);
+    $user = base64_encode("office@aksongroup.fr");
+    $email = base64_decode($user);
+    dd($report, $user, $sampleId);
 });

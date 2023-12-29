@@ -983,30 +983,35 @@ class ReportController extends Controller
             'g-recaptcha-response.required' => 'The captcha field is required.',
             'g-recaptcha-response.captcha' => 'Invalid captcha',
         ]);
+        try{
+            $data = $request->except(['_token','hiddenRecaptcha']);
+                    
+            $phoneArr = explode(":",$data['phonecode']);
+            $country_id = $phoneArr[0];
+            $phonecode = $phoneArr[1];
 
-        $data = $request->except(['_token','hiddenRecaptcha']);
-                
-        $phoneArr = explode(":",$data['phonecode']);
-        $country_id = $phoneArr[0];
-        $phonecode = $phoneArr[1];
-
-        // update fields to users table
-        if(Auth::check()){
-            $user = auth('web')->user();
-            if($user){
-                $user_data = array('user_name' => $data['name'],
-                                'email' => $data['email'],
-                                'phone' => $phonecode.$data['phone'],
-                                'company_name' => $data['company_name']);
-                User::where('id',$user->id)->update($user_data);
+            // update fields to users table
+            if(Auth::check()){
+                $user = auth('web')->user();
+                if($user){
+                    $user_data = array('user_name' => $data['name'],
+                                    'email' => $data['email'],
+                                    'phone' => $phonecode.$data['phone'],
+                                    'company_name' => $data['company_name']);
+                    User::where('id',$user->id)->update($user_data);
+                }
             }
-        }
 
-        $data['phonecode'] = $phonecode;
-        $data['country_id'] = $country_id;
-        $data['ip_address'] = \Request::getClientIp(true);// get_client_ip();
-        // $samplerequest = ReportSampleRequest::create($data);
-        // start code from here for dynamic link for reportedemail & report_id
+            $data['phonecode'] = $phonecode;
+            $data['country_id'] = $country_id;
+            $data['ip_address'] = \Request::getClientIp(true);// get_client_ip();
+            // $samplerequest = ReportSampleRequest::create($data);
+            // start code from here for dynamic link for reportedemail & report_id
+
+            return response()->json(['success' => 1, 'message' => 'Sample Report Shared Successfully!!']);
+        }catch(\Exception $e){
+            return response()->json(['success' => 0, 'message' => $e->getMessage()]);
+        }
         
         // try {
         //     dispatch(new SendFreeSampleRequestEmail($samplerequest));
@@ -1091,6 +1096,25 @@ class ReportController extends Controller
             }catch(\Exception $ex){
                 return response()->json(['success' => 0, 'error' => $ex->getMessage()]);
             }
+        }
+    }
+
+    public function sampleReportPage(Request $request, $slug){
+        $report = base64_decode($request->input('report'));
+        $user = base64_decode($request->input('user'));
+        $sampleId = base64_decode($request->input('sampleId'));
+        if($slug && ($report != "") && ($user != ""))
+        {
+            $data = ReportSampleRequest::where(['id' => $sampleId, 
+                 'report_id' => $report, 
+                 'email' => $user])->first();
+            if($data)
+            {
+                $rData = Report::find($data->report_id);
+                return view('front.sample-report-page.index', compact('rData'));
+            }
+        }else{
+            dd("Invalid Url");
         }
     }
 

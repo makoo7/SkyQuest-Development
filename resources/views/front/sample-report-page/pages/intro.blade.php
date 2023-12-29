@@ -1,0 +1,3 @@
+<div id="p1" style="overflow: hidden; position: relative; background-color: white; width: auto; height: auto;">
+    <div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+    <div id="pg1" style="-webkit-user-select: none;"><object data="{{ asset('assets/frontend/slide/1/1.svg') }}" type="image/svg+xml" id="pdf1" style="-moz-transform:scale(1); z-index: 0;"></object></div>
