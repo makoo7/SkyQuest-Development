@@ -92,5 +92,84 @@ return [
             "5.3 Market Ecosystem Map"
         ],
         "6. MARKET SIZE, 2021-2030" => []
-    ]
+    ],
+    'TABLE_OF_CONTENTS_2' => [
+        "6.4.1 North America" => [
+            "6.4.1.1 USA" => ["Segment 1", "Segment 2"],
+            "6.4.1.2 Canada"
+        ],
+        "6.4.2 Europe" => [
+            "6.4.2.1 UK",
+            "6.4.2.2 Germany",
+            "6.4.2.3 Spain",
+            "6.4.2.4 France",
+            "6.4.2.5 Italy",
+            "6.4.2.6 Rest of Europe"
+        ],
+        "6.4.3 Asia-Pacific" => [
+            "6.4.3.1 China",
+            "7.4.3.2 India",
+            "7.4.3.3 Japan",
+            "7.4.3.4 South Korea",
+            "7.4.3.5 Rest of Asia Pacific"
+        ],
+        "6.4.4 Middle East & Africa (MEA)" => [
+            "6.4.4.1 South Africa",
+            "6.4.4.2 GCC Countries",
+            "6.4.4.3 Rest of MEA"
+        ],
+        "6.4.4 Latin America (LATAM)" => [
+            "6.4.4.1 Brazil",
+            "6.4.4.2 Rest of LATAM"
+        ],
+        "7. COMPETITIVE INTELLIGENCE" => [
+            "7.1 Market Share Analysis by Company",
+            "7.2 Intensity of Competitive Rivalry",
+            "7.3 Market positioning of key players in the market"
+        ],
+        "8. COMPANY PROFILES" => [
+            "8.1 Top 10 Players"
+        ],
+        "9. NEED GAP ASSESSMENT" => [
+            "9.1 Identified Gaps in the Market",
+            "9.2 Opportunities for Innovation"
+        ],
+        "10. CONCLUSION" => [
+            "9.1 Recommendations",
+            "9.2 Conclusions"
+        ]
+        ],
+        'OBJECTIVES_OF_THE_STUDY' => [
+            "MARKET INTELLIGENCE" => [
+                "Determining and projecting the size of the {%%reportname%%} with respect to {%%segmentations%%} region, over ranging from a 10 year period  2020 to 2030",
+                "Identifying the attractive opportunities in the market by determining the largest and fastest-growing segments across the key regions",
+                "Analyzing the demand-side factors on the basis of the following:" => [
+                    "Impact of macro- and micro-economic factors on the market",
+                    "Shifts in demand patterns across different subsegments and regions"
+                ]
+                ],
+            "COMPETITIVE INTELLIGENCE" => [
+                "Identifying and profiling the key market players in the {%%reportname%%} market",
+                "Determining the market share of key players operating in the {%%reportname%%} market",
+                "Providing a comparative analysis of the market leaders on the basis of the following:" => [
+                    "Product offerings",
+                    "Business strategies",
+                    "Strengths and weaknesses",
+                    "Key financials",
+                    "Understanding the competitive landscape and identifying the major growth strategies (mergers, acquisitions, joint ventures) adopted by players across the key regions"
+                ],
+                "Providing insights on the trade scenario"
+            ]
+        ],
+        "KEY_DATA_POINTS_COVERED_IN_REPORT" => [
+            "Detailed Market Size & Growth Estimation for 15+ Countries till 2030",
+            "Global and Country Market Trends",
+            "Segment trends, opportunity, and growth analysis",
+            "Investment and funding trends",
+            "Regulatory Landscape Analysis ",
+            "Pricing analysis",
+            "Comprehensive Mapping Of Industry  Parameters",
+            "Company Analysis focusing  on financial performance and competitive Strategies Adopted by Leading Market  Participants",
+            "Market drivers, restraints, opportunities  and its impact on the market"
+        ]
 ];

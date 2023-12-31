@@ -303,6 +303,37 @@ function getPageResult($Obj, $page)
         $resp["frame"] = "frame";
         $resp["data"] = ["name" => $Obj->name, "title" => "TABLE OF CONTENTS", "content" => config('constants.TABLE_OF_CONTENTS_1'), "style" => "full"];
     }
-    
+    else if($page == 6){
+        $resp["frame"] = "frame";
+        $resp["data"] = ["name" => $Obj->name, "title" => "TABLE OF CONTENTS", "content" => config('constants.TABLE_OF_CONTENTS_2'), "style" => "full"];
+    }
+    else if($page == 7){
+        $resp["frame"] = "content";
+        $resp["data"] = [];
+    }
+    else if($page == 8){
+        $resp["frame"] = "frame";
+        $resp["data"] = ["name" => 1, "title" => "INTRODUCTION", "content" => [], "style" => "center"];
+    }
+    else if($page == 9){
+        $resp["frame"] = "content";
+        $resp["data"] = ["title" => "1.1 OBJECTIVES OF THE STUDY", "content" => config('constants.OBJECTIVES_OF_THE_STUDY'), "style" => "full", "dData" => $Obj->name];
+    }
+    else if($page == 10){
+        $resp["frame"] = "flowchart-10";
+        $resp["data"] = ["title" => "1.2 GEOGRAPHIC SCOPE", "style" => "center", "dData" => $Obj->name];
+    }
+    else if($page == 11){
+        $resp["frame"] = "flowchart-10";
+        $resp["data"] = ["title" => "1.3 MARKET SEGMENTAL SCOPE", "style" => "center", "dData" => $Obj->name];
+    }
+    else if($page == 12){
+        $resp["frame"] = "flowchart-10";
+        $resp["data"] = ["title" => "1.3 MARKET SEGMENTAL SCOPE", "style" => "center", "dData" => $Obj->name];
+    }
+    else if($page == 13){
+        $resp["frame"] = "page-13";
+        $resp["data"] = ["title" => "1.4 KEY DATA POINTS COVERED IN THE REPORT", "content" => config('constants.KEY_DATA_POINTS_COVERED_IN_REPORT'), "style" => "full", "dData" => $Obj->name];
+    }
     return $resp;
 }

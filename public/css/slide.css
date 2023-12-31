@@ -79,3 +79,65 @@
     text-transform: uppercase;
     font-size: 200%;
 }
+
+.page-5-title-full{
+    top: 7rem;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 120%;
+}
+.page-5-intro-index{
+    top: 9rem;
+    position: absolute;
+    line-height: 1;
+    left: 3rem;
+    font-size: 14px;
+}
+.page-5-intro-index-right{
+    top: 11rem;
+    position: absolute;
+    line-height: 1;
+    left: 40rem;
+    font-size: 14px;
+}
+
+.page-9-content{
+    top: 10rem;
+    left: 5rem;
+    position: absolute;
+}
+.page-9-headings{
+    font-weight: 600;
+}
+.page-9-content{ width: 70rem; }
+
+
+.page-10-img{
+    position: absolute;
+    top: 10rem;
+    left: 5rem;
+}
+.page-10-name{
+    top: 20rem;
+    width: 100px;
+    font-size: 70%;
+    color: #fff;
+    left: 8rem;
+    font-weight: 600;
+}
+
+.page-11-name{
+    top: 21rem;
+    width: 100px;
+    font-size: 80%;
+    color: #fff;
+    left: 10rem;
+    font-weight: 600;
+}
+
+.page-13-content{ 
+    top: 12rem;
+}
+.row-100{ width: 100%; display: flex;}
+.content-50{ width: 50%; top: 12rem; position: absolute; left: 4rem;}
+.page-13-textarea{ left: 40rem; line-height: 2;}

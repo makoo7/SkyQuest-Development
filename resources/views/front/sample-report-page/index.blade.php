@@ -7,26 +7,6 @@
 <link rel="stylesheet" href="{{ asset("css/slide.css") }}">
 <style class="shared-css" type="text/css" >
     .s1_1{font-family:DejaVuSans_mv;color:#000;}
-    .page-5-title-full{
-        top: 7rem;
-        left: 3rem;
-        font-weight: 700;
-        font-size: 120%;
-    }
-    .page-5-intro-index{
-        top: 9rem;
-        position: absolute;
-        line-height: 1;
-        left: 3rem;
-        font-size: 14px;
-    }
-    .page-5-intro-index-right{
-        top: 11rem;
-        position: absolute;
-        line-height: 1;
-        left: 40rem;
-        font-size: 14px;
-    }
     @font-face {
         font-family: DejaVuSans-Bold_n4;
         src: url({{ asset("assets/frontend/slide/fonts/DejaVuSans-Bold_n4.woff") }}) format("woff");
@@ -56,8 +36,13 @@
         @endif
     @elseif($response['frame'] == "frame")
         @include('front.sample-report-page.pages.frame')
+    @elseif($response['frame'] == "content")
+        @include('front.sample-report-page.pages.content')
+    @elseif($response['frame'] == "flowchart-10")
+        @include('front.sample-report-page.pages.flowchart-10')
+    @elseif($response['frame'] == "page-13")
+        @include('front.sample-report-page.pages.page-13')
     @endif
-    {{-- @include('front.sample-report-page.pages.frame') --}}
     {{-- @include('front.sample-report-page.pages.content') --}}
     {{-- @include('front.sample-report-page.pages.thankyou') --}}
 {{-- Content --}}
