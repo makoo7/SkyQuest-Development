@@ -42,6 +42,14 @@
         @include('front.sample-report-page.pages.flowchart-10')
     @elseif($response['frame'] == "page-13")
         @include('front.sample-report-page.pages.page-13')
+    @elseif($response['frame'] == "page-15")
+        @include('front.sample-report-page.pages.page-15')
+    @elseif($response['frame'] == "page-16")
+        @include('front.sample-report-page.pages.page-16')
+    @elseif($response['frame'] == "page-17")
+        @include('front.sample-report-page.pages.page-17')
+    @elseif($response['frame'] == "page-20")
+        @include('front.sample-report-page.pages.page-20')
     @endif
     {{-- @include('front.sample-report-page.pages.content') --}}
     {{-- @include('front.sample-report-page.pages.thankyou') --}}

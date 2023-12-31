@@ -309,11 +309,11 @@ function getPageResult($Obj, $page)
     }
     else if($page == 7){
         $resp["frame"] = "content";
-        $resp["data"] = [];
+        $resp["data"] = ["style" => ""];
     }
     else if($page == 8){
         $resp["frame"] = "frame";
-        $resp["data"] = ["name" => 1, "title" => "INTRODUCTION", "content" => [], "style" => "center"];
+        $resp["data"] = ["name" => "01", "title" => "INTRODUCTION", "content" => [], "style" => "center"];
     }
     else if($page == 9){
         $resp["frame"] = "content";
@@ -334,6 +334,34 @@ function getPageResult($Obj, $page)
     else if($page == 13){
         $resp["frame"] = "page-13";
         $resp["data"] = ["title" => "1.4 KEY DATA POINTS COVERED IN THE REPORT", "content" => config('constants.KEY_DATA_POINTS_COVERED_IN_REPORT'), "style" => "full", "dData" => $Obj->name];
+    }
+    else if($page == 14){
+        $resp["frame"] = "frame";
+        $resp["data"] = ["name" => "02", "title" => "RESEARCH METHODOLOGY", "content" => [], "style" => "center"];
+    }
+    else if($page == 15){
+        $resp["frame"] = "page-15";
+        $resp["data"] = ["name" => "2. RESEARCH METHODOLOGY", "content" => config('constants.KEY_DATA_POINTS_COVERED_IN_REPORT'), "style" => "full", "dData" => $Obj->name];
+    }
+    else if($page == 16){
+        $resp["frame"] = "page-16";
+        $resp["data"] = ["title" => "2.1 SECONDARY RESEARCH", "content" => config('constants.SECONDARY_RESEARCH'), "style" => "full", "dData" => $Obj->name];
+    }
+    else if($page == 17){
+        $resp["frame"] = "page-17";
+        $resp["data"] = ["title" => "2.2 PRIMARY RESEARCH", "content" => config('constants.PRIMARY_RESEARCH'), "style" => "full", "dData" => $Obj->name];
+    }
+    else if($page == 18){
+        $resp["frame"] = "content";
+        $resp["data"] = ["style" => "", "title" => "2.3 PRIMARY RESEARCH APPROACH & KEY RESPONDENTS"];
+    }
+    else if($page == 19){
+        $resp["frame"] = "content";
+        $resp["data"] = ["style" => "", "title" => "2.4 DATA TRIANGULATION & INSIGHT GENERATION"];
+    }
+    else if($page == 20){
+        $resp["frame"] = "page-20";
+        $resp["data"] = ["title" => "2.4.1 MARKET SIZE ESTIMATION", "name" => $Obj->name];
     }
     return $resp;
 }

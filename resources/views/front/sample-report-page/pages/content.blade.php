@@ -33,5 +33,16 @@
         </div>
         @endif
     @endif
+    @elseif($response["data"]["style"] == "")
+        <span class="intro-frame page-5-title-full">{{ $response["data"]["title"] }}</span>
+        @if(app('request')->input('page') == 18)
+            <div style="position: absolute; top:10rem;left:10rem;">
+                <img src="{{ asset("assets/frontend/slide/18/18.png") }}" />
+            </div>
+        @elseif(app('request')->input('page') == 19)
+        <div style="position: absolute; top:10rem;left:10rem;">
+            <img src="{{ asset("assets/frontend/slide/19/19.png") }}" />
+        </div>
+        @endif
     @endif
 </div>

@@ -141,3 +141,97 @@
 .row-100{ width: 100%; display: flex;}
 .content-50{ width: 50%; top: 12rem; position: absolute; left: 4rem;}
 .page-13-textarea{ left: 40rem; line-height: 2;}
+
+.page-15-title
+{
+    top: 13rem;
+    position: absolute;
+    width: 70%;
+    left: 10rem;
+}
+.page-15-step1{
+    top: 23rem;
+    left: 5rem;
+}
+.page-15-step1-title{
+    top: 23rem;
+    left: 9rem;
+}
+.page-15-step2{
+    top: 23rem;
+    left: 30rem;
+}
+.page-15-step2-title{
+    top: 23rem;
+    left: 35rem;
+}
+.page-15-step3{
+    top: 23rem;
+    left: 55rem;
+}
+.page-15-step3-title{
+    top: 23rem;
+    left: 60rem;
+}
+.page-15-message{
+    top: 28rem;
+    font-size: 80%;
+    text-align: justify;
+    left: 6rem;
+    width: 20rem;
+}
+.page-15-coge{
+    top: 31rem;
+    font-size: 80%;
+    left: 6rem;
+    text-align: justify;
+    width: 20rem;
+}
+.page-15-data{
+    top: 35rem;
+    font-size: 80%;
+    text-align: justify;
+    left: 6rem;
+    width: 20rem;
+}
+.page-15-notes{
+    top: 39rem;
+    font-size: 80%;
+    text-align: justify;
+    left: 6rem;
+    width: 20rem;
+}
+.page-15-deskjob{
+    top: 28rem;
+    font-size: 80%;
+    text-align: justify;
+    left: 33rem;
+}
+.page-15-contact{
+    top: 31rem;
+    font-size: 80%;
+    text-align: justify;
+    left: 33rem;
+}
+.page-15-school{
+    top: 35rem;
+    font-size: 80%;
+    text-align: justify;
+    left: 33rem;
+}
+.page-15-analysis{
+    top: 39rem;
+    font-size: 80%;
+    text-align: justify;
+    left: 33rem;
+}
+.page-15-finalize-text{
+    top: 43rem;
+    left: 4.4rem;
+    width: 30%;
+}
+.page-15-finalize-right-text{
+    top: 43rem;
+    left: 35rem;
+    width: 45%;
+}

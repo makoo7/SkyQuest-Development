@@ -171,5 +171,22 @@ return [
             "Comprehensive Mapping Of Industry  Parameters",
             "Company Analysis focusing  on financial performance and competitive Strategies Adopted by Leading Market  Participants",
             "Market drivers, restraints, opportunities  and its impact on the market"
+        ],
+        "SECONDARY_RESEARCH" => [
+            "Investor Presentations: Investor presentations and earnings call transcripts from key players in the report name, offering insights into their financial performance and strategic direction.",
+            "Paid Databases: Subscription-based databases like Factiva, Bloomberg Terminal, and Statista for comprehensive industry data, financial reports, and market analysis.",
+            "Government Publications: Reports and data from government agencies related to entertainment venues, technology trends, and economic statistics.",
+            "Trade Associations: Insights from industry-specific trade associations, including data on market trends, standards, and best practices.",
+            "Academic Journals: Peer-reviewed research articles and studies in fields such as audio technology, entertainment management, and consumer behavior.",
+            "News and Media Outlets: Articles, press releases, and interviews from industry-focused media outlets, providing current news and trends.",
+            "Company Websites: Official websites of major companies for product information, press releases, and corporate updates.",
+            "Social Media and Forums: Industry-specific social media groups, forums, and LinkedIn groups for professional discussions and insights",
+            "Historical Market Data: Historical data sources, including archives of industry publications and economic data.",
+            "Market Newsletters: Subscription-based industry newsletters and analysis reports for ongoing updates and insights."
+        ],
+        "PRIMARY_RESEARCH" => [
+            "At SkyQuest, we pool in industry experts across the value chain, to gather first-  hand insights on the market studied. In addition to these knowledgeable  industry veterans or retired experts, consultants and freelancers are a call away to  collaborate with SkyQuest on any assignment that requires real-time industry  insights.",
+            "We conduct paid primary to gather qualitative insights and opinion of a group of individuals related to the market.",
+            "Primary  research  is  used  both  to  validate  the  data  points   obtained  from  secondary research and to fill the data gaps after secondary research."
         ]
 ];
