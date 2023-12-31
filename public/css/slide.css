@@ -1,0 +1,81 @@
+.intro-frame{
+    transform-origin: bottom left;
+    z-index: 2;
+    position: absolute;
+    /* white-space: pre; */
+    overflow: visible;
+    line-height: 1.5;
+}
+.intro-name{
+    top: 9rem;
+    text-transform: uppercase;
+    font-size: 24px;
+    left: 4.4rem;
+}
+.intro-forcast{
+    top: 12rem;
+    text-transform: uppercase;
+    font-size: 24px;
+    left: 4.4rem;
+}
+.intro-sample-text span{
+    top: 24rem;
+    text-transform: uppercase;
+    font-size: 24px;
+    left: 56rem;
+}
+.intro-segment{
+    top: 17rem;
+    left: 4.4rem;
+    width: 50%;
+    height: 30%;
+    border: 2px solid yellow;
+    position: absolute;
+    background-color: #ffffff;
+}
+.intro-segment span {
+    position: relative;
+    top: 5%;
+    display: block;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.page-2-title{
+    top: 10rem;
+    left: 5rem;
+    font-size: 120%;
+}
+.page-2-message{
+    font-size: 80%;
+}
+.message-container{
+    top: 14rem;
+    left: 5rem;
+    width: 35rem;
+    text-align: justify;
+    position: absolute;
+}
+.image-header-text{
+    top: 20rem;
+    left: 5rem;
+}
+
+.page-3-title{
+    top:5rem;
+    left: 5rem;
+    font-size:120%; 
+}
+
+.page-4-name{
+    top:20rem;
+    left:10rem;
+    text-transform: uppercase;
+    font-size: 180%;
+}
+.page-4-title{
+    top:23rem;
+    left:30rem;
+    text-transform: uppercase;
+    font-size: 200%;
+}

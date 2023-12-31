@@ -1103,6 +1103,7 @@ class ReportController extends Controller
         $report = base64_decode($request->input('report'));
         $user = base64_decode($request->input('user'));
         $sampleId = base64_decode($request->input('sampleId'));
+        $page = $request->input('page') ?? 1;
         if($slug && ($report != "") && ($user != ""))
         {
             $data = ReportSampleRequest::where(['id' => $sampleId, 
@@ -1111,7 +1112,10 @@ class ReportController extends Controller
             if($data)
             {
                 $rData = Report::find($data->report_id);
-                return view('front.sample-report-page.index', compact('rData'));
+                $response = getPageResult($rData, $page);
+                return view('front.sample-report-page.index', compact('response'));
+            }else{
+                dd("Invalid Url");    
             }
         }else{
             dd("Invalid Url");

@@ -59,4 +59,38 @@ return [
     'GROUP_ID' => env('GROUP_ID', 84000285248),
     'EMAIL_CONFIG_ID' => env('EMAIL_CONFIG_ID', 84000071727),
     'RESPONDER_ID' => env('RESPONDER_ID', 84015340169),
+    'TABLE_OF_CONTENTS_1' => [
+        "1. INTRODUCTION" =>
+        [
+            "1.1 Objectives of the study",
+            "1.2 Geographic scope",
+            "1.3 Market segmental scope",
+            "1.4 Key data points covered",
+            "1.5 Definitions"
+        ],
+        "2. RESEARCH METHODOLOGY" => [
+            "2.1 Secondary research",
+            "2.2 Primary research",
+            "2.3 Primary research approach & key respondents",
+            "2.4 Data Triangulation & Insight Generation"
+        ],
+        "3. EXECUTIVE SUMMARY" => [],
+        "4. MARKET OVERVIEW" => [],
+        "4.1 INDUSTRY ANALYSIS - PORTERS 5 FORCE ANALYSIS" => [
+            "4.2.1 Threat of New Entrants",
+            "4.2.2 Bargaining Power of Suppliers",
+            "4.2.3 Bargaining Power of Buyers",
+            "4.2.4 Threat of Substitute Products or Services",
+            "4.2.5 Intensity of Competitive Rivalry",
+            "4.1 Market drivers & opportunities",
+            "4.2 Market challenges",
+            "4.3 Recent Industry Developments"
+        ],
+        "5. KEY MARKET INSIGHTS" => [
+            "5.1 Degree of Competition",
+            "5.2 Pricing Analysis",
+            "5.3 Market Ecosystem Map"
+        ],
+        "6. MARKET SIZE, 2021-2030" => []
+    ]
 ];

@@ -282,3 +282,27 @@ function string_between_two_string($str, $starting_word, $ending_word)
             return substr($str, $subtring_start); 
         }
     }
+
+function getPageResult($Obj, $page)
+{
+    $frame = "intro";
+    $resp = [];
+    if($page == 1){
+        $resp["frame"] = $frame;
+        $resp["data"] = ["name" => $Obj->name];
+    }
+    else if($page == 2 || $page == 3){
+        $resp["frame"] = "dummy-content";
+        $resp["data"] = null;
+    }
+    else if($page == 4){
+        $resp["frame"] = "frame";
+        $resp["data"] = ["name" => $Obj->name, "title" => "TABLE OF CONTENTS", "content" => [], "style" => "center"];
+    }
+    else if($page == 5){
+        $resp["frame"] = "frame";
+        $resp["data"] = ["name" => $Obj->name, "title" => "TABLE OF CONTENTS", "content" => config('constants.TABLE_OF_CONTENTS_1'), "style" => "full"];
+    }
+    
+    return $resp;
+}
