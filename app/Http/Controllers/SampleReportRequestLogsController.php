@@ -10,9 +10,11 @@ use App\Models\User;
 use Carbon\Carbon;
 
 use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\IOFactory;
+// use PhpOffice\PhpPresentation\IOFactory;
 use PhpOffice\PhpPresentation\Style\Color;
 use PhpOffice\PhpPresentation\Style\Alignment;
+// use PhpOffice\PhpPresentation\Style\Font;
+use PhpOffice\PhpPresentation\Shape\RichText;
 // use PhpOffice\PhpPresentation\PHPPresentation;
 
 class SampleReportRequestLogsController extends Controller
@@ -52,16 +54,80 @@ class SampleReportRequestLogsController extends Controller
     public function generatePresentation(Request $request)
     {
         // Create a new PHPPresentation instance
-        $presentation = new PHPPresentation();
-        // Add slides, set content, etc.
-        $slide = $presentation->getActiveSlide();
-        $shape = $slide->createDrawingShape();
-        $shape->setName('Sample image')
-            ->setDescription('Sample image')
+            $presentation = new PhpPresentation();
+            $report = Report::find(63);
+
+            $slide = $presentation->getActiveSlide();
+
+            $shape = $slide->createDrawingShape();
+
+            $shape->setName('Sample image')
             ->setPath(public_path('assets/frontend/slide/1/img/1.jpg'))
-            ->setHeight(36)
-            ->setOffsetX(10)
+            ->setOffsetX(850)
             ->setOffsetY(10);
+            $shape1 = $slide->createDrawingShape();
+
+            $shape1->setName('Sample image')
+            ->setPath(public_path('assets/frontend/slide/1/img/1.png'))
+            ->setHeight(36)
+            ->setOffsetX(0)
+            ->setOffsetY(0);
+
+            // Add a slide
+            $shape = $slide->createRichTextShape()
+            ->setHeight(300)
+            ->setWidth(600)
+            ->setOffsetX(20)
+            ->setOffsetY(20);
+
+            $shape->getActiveParagraph()->getAlignment()->setHorizontal( Alignment::HORIZONTAL_CENTER );
+            $textRun = $shape->createTextRun($report->name);
+            $textRun->getFont()->setBold(true);
+
+            $shapetext = $slide->createRichTextShape()
+            ->setHeight(300)
+            ->setWidth(600)
+            ->setOffsetX(20)
+            ->setOffsetY(45);
+
+            $shapetext->getActiveParagraph()->getAlignment()->setHorizontal( Alignment::HORIZONTAL_CENTER );
+            $textRun2 = $shapetext->createTextRun('MARKET REPORT 2023');
+            $textRun2->getFont()->setBold(true);
+
+            $segment1 = $slide->createRichTextShape()
+            ->setHeight(300)
+            ->setWidth(600)
+            ->setOffsetX(20)
+            ->setOffsetY(65);
+
+            $segment1->getActiveParagraph()->getAlignment()->setHorizontal( Alignment::HORIZONTAL_CENTER );
+            $textRun2 = $segment1->createTextRun('segment 1: ');
+            $textRun2->getFont()->setBold(true);
+            
+
+            $segment2 = $slide->createRichTextShape()
+            ->setHeight(300)
+            ->setWidth(600)
+            ->setOffsetX(20)
+            ->setOffsetY(85);
+
+            $segment2->getActiveParagraph()->getAlignment()->setHorizontal( Alignment::HORIZONTAL_CENTER );
+            $textRun2 = $segment2->createTextRun('segment 2: ');
+            $textRun2->getFont()->setBold(true);
+
+            $segment3 = $slide->createRichTextShape()
+            ->setHeight(300)
+            ->setWidth(600)
+            ->setOffsetX(20)
+            ->setOffsetY(105);
+
+            $segment3->getActiveParagraph()->getAlignment()->setHorizontal( Alignment::HORIZONTAL_CENTER );
+            $textRun2 = $segment3->createTextRun('segment 3: ');
+            $textRun2->getFont()->setBold(true);
+                        //  ->setSize(60)
+                        //  ->setColor(new Color('FFE06B20'));
+
+            
 
         // Save the presentation
         $writer = new \PhpOffice\PhpPresentation\Writer\PowerPoint2007($presentation);
