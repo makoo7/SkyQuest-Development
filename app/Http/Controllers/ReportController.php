@@ -1005,55 +1005,55 @@ class ReportController extends Controller
             $data['phonecode'] = $phonecode;
             $data['country_id'] = $country_id;
             $data['ip_address'] = \Request::getClientIp(true);// get_client_ip();
-            // $samplerequest = ReportSampleRequest::create($data);
+            $samplerequest = ReportSampleRequest::create($data);
+            try {
+                dispatch(new SendFreeSampleRequestEmail($samplerequest));
+            } catch (\Exception $e) {
+                Log::error('Error while sending free sample request email.'.$e->getMessage());
+            }
+
+            // call API to create ticket in freshdesk
+            $report_data = Report::find($data['report_id']);
+            $report_name = ($report_data) ? $report_data->name : '';
+
+            $country = $samplerequest->country_id ? $samplerequest->country->name : '';
+            $sector = ($report_data) ? $report_data->sector->title : '';
+            $industry_group = ($report_data) ? $report_data->industry_group->title : '';
+            $industry = ($report_data) ? $report_data->industry->title : '';
+            $subindustry = ($report_data) ? $report_data->sub_industry->title : '';
+
+            // $response = Http::withHeaders(['Authorization' => 'Token token='.config('constants.FRESHDESK_API_KEY')])->post(config('constants.TICKET_API_URL')."contacts/upsert", [
+            //     'unique_identifier' => ['emails' => $data['email']],
+            //     'contact' => ['first_name' => $data['name'],
+            //                 'job_title' => $data['designation'],
+            //                 'mobile_number' => $phonecode.$data['phone'],
+            //                 'country' => $country]
+            // ]);
+
+            // $res = $response->json();
+            // $contactId = ($res) ? $res['contact']['id'] : '';
+                    
+            // $response = Http::withHeaders(['Authorization' => 'Token token='.config('constants.FRESHDESK_API_KEY')])->post(config('constants.TICKET_API_URL')."deals", [
+            //     'deal' => ['name' => $report_name,
+            //                 'amount' => 1,
+            //                 'contacts_added_list' => [$contactId],
+            //                 'custom_field' => ['cf_description' => (isset($data['message']) && !empty(trim($data['message']))) ? $data['message'] : 'No description added',
+            //                                     'cf_subject' => 'Sample Report : '.$report_name,
+            //                                     'cf_company_name' => $data['company_name'],
+            //                                     'cf_ip_address' => $data['ip_address'],
+            //                                     'cf_sector' => $sector,
+            //                                     'cf_industry_group' => $industry_group,
+            //                                     'cf_industry' => $industry,
+            //                                     'cf_sub_industry' => $subindustry,
+            //                                     'cf_linkedin_url' => $data['linkedin_link'] ? $data['linkedin_link'] : '']]
+            // ]);
+
             // start code from here for dynamic link for reportedemail & report_id
 
             return response()->json(['success' => 1, 'message' => 'Sample Report Shared Successfully!!']);
         }catch(\Exception $e){
             return response()->json(['success' => 0, 'message' => $e->getMessage()]);
         }
-        
-        // try {
-        //     dispatch(new SendFreeSampleRequestEmail($samplerequest));
-        // } catch (\Exception $e) {
-        //     Log::error('Error while sending free sample request email.'.$e->getMessage());
-        // }
-        
-        // call API to create ticket in freshdesk
-        // $report_data = Report::find($data['report_id']);
-        // $report_name = ($report_data) ? $report_data->name : '';
-
-        // $country = $samplerequest->country_id ? $samplerequest->country->name : '';
-        // $sector = ($report_data) ? $report_data->sector->title : '';
-        // $industry_group = ($report_data) ? $report_data->industry_group->title : '';
-        // $industry = ($report_data) ? $report_data->industry->title : '';
-        // $subindustry = ($report_data) ? $report_data->sub_industry->title : '';
-
-        // $response = Http::withHeaders(['Authorization' => 'Token token='.config('constants.FRESHDESK_API_KEY')])->post(config('constants.TICKET_API_URL')."contacts/upsert", [
-        //     'unique_identifier' => ['emails' => $data['email']],
-        //     'contact' => ['first_name' => $data['name'],
-        //                 'job_title' => $data['designation'],
-        //                 'mobile_number' => $phonecode.$data['phone'],
-        //                 'country' => $country]
-        // ]);
-
-        // $res = $response->json();
-        // $contactId = ($res) ? $res['contact']['id'] : '';
-                
-        // $response = Http::withHeaders(['Authorization' => 'Token token='.config('constants.FRESHDESK_API_KEY')])->post(config('constants.TICKET_API_URL')."deals", [
-        //     'deal' => ['name' => $report_name,
-        //                 'amount' => 1,
-        //                 'contacts_added_list' => [$contactId],
-        //                 'custom_field' => ['cf_description' => (isset($data['message']) && !empty(trim($data['message']))) ? $data['message'] : 'No description added',
-        //                                     'cf_subject' => 'Sample Report : '.$report_name,
-        //                                     'cf_company_name' => $data['company_name'],
-        //                                     'cf_ip_address' => $data['ip_address'],
-        //                                     'cf_sector' => $sector,
-        //                                     'cf_industry_group' => $industry_group,
-        //                                     'cf_industry' => $industry,
-        //                                     'cf_sub_industry' => $subindustry,
-        //                                     'cf_linkedin_url' => $data['linkedin_link'] ? $data['linkedin_link'] : '']]
-        // ]);
         
         // $notification = ['message' => 'Your free sample request has been send successfully!', 'alert-class' => 'success'];
         // return redirect()->back()->with($notification);
