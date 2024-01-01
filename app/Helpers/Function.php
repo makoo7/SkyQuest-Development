@@ -363,5 +363,13 @@ function getPageResult($Obj, $page)
         $resp["frame"] = "page-20";
         $resp["data"] = ["title" => "2.4.1 MARKET SIZE ESTIMATION", "name" => $Obj->name];
     }
+    else if($page == 21){
+        $resp["frame"] = "page-21";
+        $resp["data"] = ["title" => "2.5 STUDY ASSUMPTIONS & MARKET DEFINITION", "name" => $Obj->name];
+    }
+    else if($page == 22){
+        $resp["frame"] = "page-22";
+        $resp["data"] = ["title" => "2.6 QUALITY ASSURANCE PROCESS", "name" => $Obj->name];
+    }
     return $resp;
 }
