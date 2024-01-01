@@ -2,9 +2,11 @@
 <html>
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="{{ asset("css/slide.css") }}">
+<link rel="stylesheet" href="{{ asset("css/index.css") }}">
 <style class="shared-css" type="text/css" >
     .s1_1{font-family:DejaVuSans_mv;color:#000;}
     @font-face {
@@ -50,6 +52,10 @@
         @include('front.sample-report-page.pages.page-17')
     @elseif($response['frame'] == "page-20")
         @include('front.sample-report-page.pages.page-20')
+    @elseif($response['frame'] == "page-21")
+        @include('front.sample-report-page.pages.page-21')
+    @elseif($response['frame'] == "page-22")
+        @include('front.sample-report-page.pages.page-22')
     @endif
     {{-- @include('front.sample-report-page.pages.content') --}}
     {{-- @include('front.sample-report-page.pages.thankyou') --}}

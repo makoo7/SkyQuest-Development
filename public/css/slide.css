@@ -6,40 +6,37 @@
     overflow: visible;
     line-height: 1.5;
 }
-.intro-name{
-    top: 9rem;
-    text-transform: uppercase;
-    font-size: 24px;
+.intro-text{
+    top: 11rem;
     left: 4.4rem;
-}
-.intro-forcast{
-    top: 12rem;
     text-transform: uppercase;
-    font-size: 24px;
-    left: 4.4rem;
+    font-size: 36px;
 }
+.intro-text p{margin-bottom: 0;}
 .intro-sample-text span{
-    top: 24rem;
+    top: 36rem;
     text-transform: uppercase;
-    font-size: 24px;
-    left: 56rem;
+    font-size: 34px;
+    right: 27rem;
+    text-align: center;
 }
 .intro-segment{
-    top: 17rem;
+    top: 19rem;
     left: 4.4rem;
-    width: 50%;
-    height: 30%;
     border: 2px solid yellow;
     position: absolute;
     background-color: #ffffff;
+    padding: 1rem;
+    width: 50%;
 }
 .intro-segment span {
     position: relative;
     top: 5%;
     display: block;
-    padding-top: 1rem;
-    padding-left: 1rem;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
+.intro-segment span:last-child{margin-bottom: 0;}
 
 .page-2-title{
     top: 10rem;
@@ -234,4 +231,22 @@
     top: 43rem;
     left: 35rem;
     width: 45%;
+}
+
+/* Responsive Start */
+@media(max-width: 1220px){
+    .intro-text{font-size: 28px; top: 8rem;}
+    .intro-segment{top: 15rem;}
+}
+
+@media(max-width: 967px){
+    .intro-text{font-size: 22px; top: 6.5rem; left: 3.5rem;}
+    .intro-segment span{font-size: 18px;}
+    .intro-segment {top: 12rem; left: 3.5rem;}
+}
+
+@media(max-width: 772px){
+    .intro-text{font-size: 22px; top: 6.5rem;}
+    .intro-segment span{font-size: 18px;}
+    .intro-segment {top: 12rem;}
 }
