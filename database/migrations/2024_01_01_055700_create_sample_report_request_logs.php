@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReportExportTable extends Migration
+class CreateSampleReportRequestLogs extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateReportExportTable extends Migration
      */
     public function up()
     {
-        Schema::create('report_export', function (Blueprint $table) {
+        Schema::create('sample_report_request_logs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('admin_id')->constrained('admins')->onDelete('cascade');
-            $table->uuid('uuid');
-            $table->date('start_date')->nullable();
-            $table->date('end_date')->nullable();
-            $table->dateTime('fields');
+            $table->bigInteger('srr_id');
+            $table->bigInteger('report_id');
+            $table->bigInteger('page_id');
+            $table->dateTime('start_time');
+            $table->dateTime('end_time');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -32,6 +32,6 @@ class CreateReportExportTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('report_export');
+        Schema::dropIfExists('sample_report_request_logs');
     }
 }
