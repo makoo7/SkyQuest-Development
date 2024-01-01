@@ -70,6 +70,9 @@ Route::post('/sendEmailOtp', 'ReportController@sendEmailOtp')->name('send-email-
 Route::post('/verifyEmailOtp', 'ReportController@verifyEmailOtp')->name('verify-email-otp');
 Route::get('/sample-report-page/{slug}', 'ReportController@sampleReportPage')->name('sample-report-page');
 
+// sample report request logs code start
+Route::post('/sample-report-logs-store', 'SampleReportRequestLogsController@store')->name('sample-report-logs-store');
+
 /* Frontend User Auth Routes */
 Route::get('reset-password/{token}', 'HomeController@index')->middleware('guest')->name('password.reset');
 

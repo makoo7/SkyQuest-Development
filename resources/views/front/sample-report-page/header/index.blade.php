@@ -21,14 +21,14 @@
       <ul class="pagination justify-content-end">
         @if($prevRoute >= 1)
         <li class="page-item">
-          <a class="page-link" href="{{ route('sample-report-page', ['slug' => $slug, 'report' => base64_encode($report), 'user' => base64_encode($user), 'sampleId' => base64_encode($sampleId), 'page' => $prevRoute]) }}" tabindex="-1" >Previous</a>
+          <a class="page-link" id="btn-previous" href="{{ route('sample-report-page', ['slug' => $slug, 'report' => base64_encode($report), 'user' => base64_encode($user), 'sampleId' => base64_encode($sampleId), 'page' => $prevRoute]) }}" tabindex="-1" >Previous</a>
         </li>
         @endif
         {{-- disabled aria-disabled="true" <li class="page-item"><a class="page-link" href="#">1</a></li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
         <li class="page-item"><a class="page-link" href="#">3</a></li> --}}
         <li class="page-item">
-          <a class="page-link" href="{{ route('sample-report-page', ['slug' => $slug, 'report' => base64_encode($report), 'user' => base64_encode($user), 'sampleId' => base64_encode($sampleId), 'page' => $nextRoute]) }}">Next</a>
+          <a class="page-link" id="btn-next" data-href="{{ route('sample-report-page', ['slug' => $slug, 'report' => base64_encode($report), 'user' => base64_encode($user), 'sampleId' => base64_encode($sampleId), 'page' => $nextRoute]) }}" href="javascript:void(0);">Next</a>
         </li>
       </ul>
       {{-- <form class="form-inline my-2 my-lg-0">
