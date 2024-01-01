@@ -4,8 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
-require_once("../vendor/phpoffice/phppresentation/src/PhpPresentation/Autoloader.php");
-require_once("../vendor/phpoffice/common/src/Common/Autoloader.php");
+// require_once("../vendor/phpoffice/phppresentation/src/PhpPresentation/Autoloader.php");
+// require_once("../vendor/phpoffice/common/src/Common/Autoloader.php");
 
 class AppServiceProvider extends ServiceProvider
 {
