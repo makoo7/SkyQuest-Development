@@ -1113,7 +1113,7 @@ class ReportController extends Controller
             {
                 $rData = Report::find($data->report_id);
                 $response = getPageResult($rData, $page);
-                return view('front.sample-report-page.index', compact('response'));
+                return view('front.sample-report-page.index', compact('response','user','report', 'sampleId', 'page', 'slug'));
             }else{
                 dd("Invalid Url");    
             }
