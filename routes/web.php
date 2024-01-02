@@ -412,6 +412,20 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
         Route::get('/report-export', 'ReportExportController@index')->name('report-export.index');
         Route::post('/report-export/store', 'ReportExportController@store')->name('report-export.store');
         Route::get('/report-export/download/{uuid}', 'ReportExportController@download')->name('report-export.download');
+
+        // Sales Module
+        Route::get('/sales-list', 'SalesController@index')->name('sales-list.index');
+        Route::post('/sales-list/ajax', 'SalesController@ajax')->name('sales-list.ajax');
+        Route::get('/sales-list/add', 'SalesController@add')->name('sales-list.add');
+        Route::post('/sales-list/store', 'SalesController@store')->name('sales-list.store');
+        Route::post('/sales-list/update', 'SalesController@update')->name('sales-list.update');
+        Route::post('/sales-list/edit/{id}', 'SalesController@edit')->name('sales-list.edit');
+
+        // Research Module
+        Route::get('/research-list', 'ResearchController@index')->name('research-list.index');
+        Route::post('/research-list/ajax', 'ResearchController@ajax')->name('research-list.ajax');
+        Route::get('/research-list/add', 'ResearchController@add')->name('research-list.add');
+        Route::post('/research-list/store', 'ResearchController@store')->name('research-list.store');
     });
     
 });

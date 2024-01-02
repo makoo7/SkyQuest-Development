@@ -224,5 +224,16 @@
             </a>
         </li>
         @endif
+
+        <li @if(request()->segment(2) == 'sales-list') class="active" @endif>
+            <a href="{!! route('admin.sales-list.index') !!}">
+                <i class="fa-solid fa-file-export"></i> Sales Report
+            </a>
+        </li>
+        <li @if(request()->segment(2) == 'research-list') class="active" @endif>
+            <a href="{!! route('admin.research-list.index') !!}">
+                <i class="fa-solid fa-file-export"></i> Research Report
+            </a>
+        </li>
     </ul>
 </nav>
