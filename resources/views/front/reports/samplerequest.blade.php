@@ -436,12 +436,11 @@ function sendFinalForm(obj){
         type: "POST",
         data: obj,
         success: function (data) {
-            // if(data.success == 1){
-            //     sendFinalForm($("#frmsamplerequest").serialize());
-            // }else{
-            //     alert(data.error);
-            //     return false;
-            // }
+             if(data.success == 1){
+                 $("#emailOtpModal").modal('hide');
+                 alert(data.message);
+                 window.location.reload();
+             }
         },
         error: function(error){}
     });

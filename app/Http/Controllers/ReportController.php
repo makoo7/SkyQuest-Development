@@ -57,6 +57,7 @@ use Illuminate\Support\Facades\Log;
 use App\Rules\ScriptPreventRule;
 use Illuminate\Support\Facades\Http;
 use App\Mail\sendEmailOtp;
+use App\Mail\sampleReportLink;
 
 class ReportController extends Controller
 {
@@ -1050,6 +1051,12 @@ class ReportController extends Controller
 
             // start code from here for dynamic link for reportedemail & report_id
 
+            try {
+                Mail::to($data['email'])->send(new sampleReportLink($report_data->id, $samplerequest->id, $data['email'], $report_data->slug));
+            } catch (\Exception $e) {
+                return response()->json(['success' => 0, 'message' => $e->getMessage()]);
+            }
+
             return response()->json(['success' => 1, 'message' => 'Sample Report Shared Successfully!!']);
         }catch(\Exception $e){
             return response()->json(['success' => 0, 'message' => $e->getMessage()]);
@@ -1072,7 +1079,7 @@ class ReportController extends Controller
                 }else{
                     $data = DB::table('report_email_otp')->insert(['email' => $email, 'otp' => $digits]);
                 }
-                // Mail::to($email)->send(new sendEmailOtp($email,$digits));
+                Mail::to($email)->send(new sendEmailOtp($email,$digits));
                 return response()->json(['success' => 1]);
             }catch(\Exception $ex){
                 return response()->json(['success' => 0, 'error' => $ex->getMessage()]);

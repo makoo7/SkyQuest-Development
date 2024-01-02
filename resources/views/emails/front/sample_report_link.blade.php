@@ -11,7 +11,7 @@
                     <td align="left" style="font-size:13px; line-height:23px; color:#000; padding:0 0 12px; font-family:Arial, Helvetica, sans-serif;">
                       <p style="text-align: center;">Here is sample report Link:</p>
                       <a href="{{ route('sample-report-page', ['slug' => $slug,
-                        'report' => $report, 'user' => $user, 'sampleId' => $sampleId]) }}"><h4 style="text-align: center;">Please Click here</h4>
+                        'report' => base64_encode($report), 'user' => base64_encode($user), 'sampleId' => base64_encode($sampleId)]) }}"><h4 style="text-align: center;">Please Click here</h4>
                       </a>
                     </td>
                 </tr>
