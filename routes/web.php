@@ -426,6 +426,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
         Route::post('/research-list/ajax', 'ResearchController@ajax')->name('research-list.ajax');
         Route::get('/research-list/add', 'ResearchController@add')->name('research-list.add');
         Route::post('/research-list/store', 'ResearchController@store')->name('research-list.store');
+        Route::post('/research-list/update', 'ResearchController@update')->name('research-list.update');
+        Route::post('/research-list/edit/{id}', 'ResearchController@edit')->name('research-list.edit');
     });
     
 });
