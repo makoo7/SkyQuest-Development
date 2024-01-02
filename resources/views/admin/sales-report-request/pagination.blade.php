@@ -15,38 +15,36 @@
         <th class="btns-col">To</th>
         <th class="btns-col">StartDate</th>   
         <th class="btns-col">EndDate</th>
+        <th class="btns-col">Status</th>
         <th class="btns-col">Action</th>
     </thead>
     <tbody>
-        {{-- @forelse ($email_restrictions as $email_restriction) --}}
-            <tr id="item_1">
-                <td scope="row" class="name-col">Reportname</td>
+        @forelse ($email_restrictions as $email_restriction)
+            <tr id="item_{{ $email_restriction->id }}">
+                <td scope="row" class="name-col">{{ $email_restriction->report->name }}</td>
                 <td scope="row" class="name-col">Sales Dept.</td>
-                <td scope="row" class="name-col">Start Date</td>
-                <td scope="row" class="name-col">End Date</td>
+                <td scope="row" class="name-col">{{ $email_restriction->start_date }}</td>
+                <td scope="row" class="name-col">{{ $email_restriction->end_date }}</td>
+                <td scope="row" class="name-col">{{ ($email_restriction->status == 0) ? 'Pending' : 'Done' }}</td>
                 <td scope="row" class="name-col">
-                    {{-- <a id="edit_row" href="{{ url('admin/email-restriction/edit/' . $email_restriction->id) }}"
-                        class="btn action-btn" role="button" aria-pressed="true" title="Edit">                        
-                        <i class="fa fa-pen green" aria-hidden="true"></i>
-                    </a>
                     <a href="javascript:void(0);" data-id="{{ $email_restriction->id }}" class="btn action-btn deleteData" title="Delete" role="button" aria-pressed="true">
                         <i class="fa fa-trash red" aria-hidden="true"></i>
-                    </a> --}}
+                    </a>
                 </td>
             </tr>
-        {{-- @empty
+        @empty
             <tr>
                 <td colspan="3" class="no-record">
                     No record found.
                 </td>
             </tr>
-        @endforelse --}}
+        @endforelse
     </tbody>
 </table>
 <div id="email-restrictions_nav">
     <div class="d-flex align-items-center justify-content-between">
         <div>
-            Total no. of records = <span class="text-theme-color">0</span>
+            Total no. of records = <span class="text-theme-color">{{ $email_restrictions_count }}</span>
         </div>
         <div>{{ $email_restrictions->links() }}</div>
     </div>

@@ -12,6 +12,7 @@ use Spatie\Permission\Models\Permission;
 use App\Models\Admin;
 use DB;
 use App\Models\ResearchSampleReport;
+use App\Models\SalesReportRequest;
 
 class ResearchController extends Controller
 {
@@ -21,7 +22,7 @@ class ResearchController extends Controller
     }
 
     public function store(Request $request){
-        dd("Store");
+        dd($request->all());
     }
 
     public function add(Request $request){
@@ -33,7 +34,7 @@ class ResearchController extends Controller
     public function ajax(Request $request)
 	{
         $per_page_record = isset($request->per_page) ? $request->per_page : '25';
-        $email_restrictions = new ResearchSampleReport();
+        $email_restrictions = new SalesReportRequest();
         // if ($request->keyword) {
         //     $search = $request->keyword;
         //     $email_restrictions = $email_restrictions->where(function ($q) use ($search) {
@@ -55,5 +56,14 @@ class ResearchController extends Controller
     public function update(Request $request, $id){
     }
     public function edit(Request $request, $id){
+        $ssrr_id = $id;
+        $SalesReportRequest = SalesReportRequest::find($ssrr_id);
+        if($SalesReportRequest){
+            $report_id = $SalesReportRequest->report_id;
+            $title = 'Add Research Report';
+            $email_restriction = new ResearchSampleReport();
+            return view('admin.research-panel-sample-report.add', 
+                compact('title','email_restriction', 'report_id', 'ssrr_id'));
+        }
     }
 }

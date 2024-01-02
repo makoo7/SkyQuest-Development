@@ -12,6 +12,8 @@ use Spatie\Permission\Models\Permission;
 use App\Models\Admin;
 use DB;
 use App\Models\SalesReportRequest;
+use App\Models\Report;
+use Auth;
 
 class SalesController extends Controller
 {
@@ -21,13 +23,34 @@ class SalesController extends Controller
     }
 
     public function store(Request $request){
-        dd("Store");
+        $report_id = $request->input('report_id');
+        $start_date = $request->input('start_date');
+        $end_date = $request->input('end_date');
+        $message = $request->input('message');
+        $user = auth('admin')->user();
+        
+        if(($report_id != "") && ($start_date != "") && ($end_date != "") && ($message != ""))
+        {
+            $SalesReportRequest = new SalesReportRequest();
+            $SalesReportRequest->report_id = $report_id;
+            $SalesReportRequest->from_id = $user->id;
+            $SalesReportRequest->to_id = 0;
+            $SalesReportRequest->message = $message;
+            $SalesReportRequest->start_date = $start_date;
+            $SalesReportRequest->end_date = $end_date;
+            $SalesReportRequest->save();
+            
+            $notification = ['message' => 'Research Request Created Successfully!','alert-class' => 'success'];
+		    return redirect()->route('admin.sales-list.index')->with($notification);
+        }
+
     }
 
     public function add(Request $request){
         $title = 'Add Sales Report';
+        $report = Report::select('id', 'name')->get()->toArray();
         $email_restriction = new SalesReportRequest();
-        return view('admin.sales-report-request.add', compact('title','email_restriction'));
+        return view('admin.sales-report-request.add', compact('title','email_restriction', 'report'));
     }
 
     public function ajax(Request $request)

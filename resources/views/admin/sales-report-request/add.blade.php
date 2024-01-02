@@ -12,23 +12,27 @@
                             <div class="card-body">
                                
                                 <div class="form-group row">
-                                    {{-- <div class="col-sm-6">
-                                        <label class="form-control-label">Email Domain</label>
-                                        <input type="text" name="email_domain" id="email_domain" value="{!! old('email_domain') ?? $email_restriction->email_domain !!}" class="form-control">
-                                        @error('email_domain')
-                                        <span class="error" role="alert">{!! $message !!}</span>
-                                        @enderror
+                                    <div class="col-sm-12">
+                                        <label class="form-control-label">Report</label>
+                                        <select name="report_id" id="report_id" class="form-control" required>
+                                            <option value="">--select--</option>
+                                            @foreach($report as $r)
+                                            <option value="{{ $r['id'] }}">{{ $r['name'] }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                     <div class="col-sm-6">
-                                        <label class="form-control-label">Email Category</label>
-                                        <select name="email_category" id="email_category" class="form-control">
-                                            <option value="Generic" @if($email_restriction->email_category == "Generic") selected @endif>Generic</option>
-                                            <option value="Edu" @if($email_restriction->email_category == "Edu") selected @endif>Edu</option>
-                                        </select>
-                                        @error('email_category')
-                                        <span class="error" role="alert">{!! $message !!}</span>
-                                        @enderror
-                                    </div> --}}
+                                        <label class="form-control-label">Start Date</label>
+                                        <input type="date" class="form-control" name="start_date" id="start_date" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-control-label">End Date</label>
+                                        <input type="date" class="form-control" name="end_date" id="end_date" required>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label class="form-control-label">Message</label>
+                                        <textarea class="form-control" name="message" id="message" required></textarea>
+                                    </div>
                                 </div>
                                 <div class="line"> </div>
                                 <div class="form-group row">
