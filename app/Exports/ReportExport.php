@@ -578,7 +578,7 @@ class ReportExport implements FromView, WithStyles
 
             if(in_array('companies_mentioned', $fields)){
                 $companies = ReportMetrics::where('report_id',$report->id)->where('meta_key', 'Companies covered')->pluck('meta_value')->first();
-                $final_array[$k]['companies_mentioned'] = $companies;
+                $final_array[$k]['companies_mentioned'] = $this->removeAhrefFromText($companies);
             }
 
             if(in_array('products_mentioned', $fields)){
@@ -797,6 +797,14 @@ class ReportExport implements FromView, WithStyles
     public function replaceBullets($html) {
         $modifiedHtml = str_replace(' &#917545;&#917545;&#917545;&#917545; &#917545;&#917545;&#917545;&#917545; &#917545;&#917545;&#917545;&#917545; &bull;&nbsp;&nbsp;&nbsp;&#9642;', ' 󠀩󠀩󠀩󠀩 󠀩 󠀩 󠀩󠀩 󠀩 󠀩 󠀩&#9642;', $html);
         return $modifiedHtml;
+    }
+
+    public function removeAhrefFromText($html){
+        $pattern = '/<a\s[^>]*href=[\'"]https?:\/\/.*?[\'"][^>]*>(.*?)<\/a>/i';
+        $pattern2 = '/<a\b[^>]*>(.*?)<\/a>/i';
+        $data = preg_replace($pattern,'<a>$1</a>',$html);
+        $result = preg_replace($pattern2, '$1', $data);
+        return $this->replaceLiToBullet($result);
     }
 }
 
