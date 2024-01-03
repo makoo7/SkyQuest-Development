@@ -235,5 +235,10 @@
                 <i class="fa-solid fa-file-export"></i> Research Report
             </a>
         </li>
+        <li @if(request()->segment(2) == 'sample-report-logs') class="active" @endif>
+            <a href="{!! route('admin.sample-report-logs.index') !!}">
+                <i class="fa-solid fa-file-export"></i> Sample Report Logs
+            </a>
+        </li>
     </ul>
 </nav>

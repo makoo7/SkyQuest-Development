@@ -73,7 +73,7 @@ Route::get('/sample-report-page/{slug}', 'ReportController@sampleReportPage')->n
 // sample report request logs code start
 Route::post('/sample-report-logs-store', 'SampleReportRequestLogsController@store')->name('sample-report-logs-store');
 Route::get('/generate-ppt', 'SampleReportRequestLogsController@generatePresentation')->name('generate-ppt');
-Route::get('/download-ppt', 'SampleReportRequestLogsController@index')->name('download-ppt.index');
+// Route::get('/download-ppt', 'SampleReportRequestLogsController@index')->name('download-ppt.index');
 
 /* Frontend User Auth Routes */
 Route::get('reset-password/{token}', 'HomeController@index')->middleware('guest')->name('password.reset');
@@ -429,6 +429,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
         Route::post('/research-list/store', 'ResearchController@store')->name('research-list.store');
         Route::post('/research-list/update', 'ResearchController@update')->name('research-list.update');
         Route::get('/research-list/edit/{id}', 'ResearchController@edit')->name('research-list.edit');
+
+        Route::get('/sample-report-logs', '\App\Http\Controllers\SampleReportRequestLogsController@index')->name('sample-report-logs.index');
+        Route::post('/sample-report-logs/ajax', '\App\Http\Controllers\SampleReportRequestLogsController@ajax')->name('sample-report-logs.ajax');
     });
     
 });

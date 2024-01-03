@@ -8,7 +8,6 @@ use App\Models\ReportSampleRequest;
 use App\Models\SampleReportRequestLogs;
 use App\Models\User;
 use Carbon\Carbon;
-
 use PhpOffice\PhpPresentation\PhpPresentation;
 // use PhpOffice\PhpPresentation\IOFactory;
 use PhpOffice\PhpPresentation\Style\Color;
@@ -20,7 +19,8 @@ use PhpOffice\PhpPresentation\Shape\RichText;
 class SampleReportRequestLogsController extends Controller
 {
     public function index(Request $request){
-        return view('front.download-report.index');
+        $title = "Sample Report Logs";
+        return view('admin.sample-report-logs.index', compact('title'));
     }
     public function store(Request $request)
     {
@@ -50,9 +50,27 @@ class SampleReportRequestLogsController extends Controller
         }
         return true;
     }
-    public function update(Request $request){}
-    public function delete(Request $request){}
-    public function list(Request $request){}
+    public function ajax(Request $request)
+    {
+        $per_page_record = isset($request->per_page) ? $request->per_page : '25';
+        $email_restrictions = new SampleReportRequestLogs();
+        // if ($request->keyword) {
+        //     $search = $request->keyword;
+        //     $email_restrictions = $email_restrictions->where(function ($q) use ($search) {
+        //         $q->Where('email_domain', 'LIKE', "%{$search}%");
+        //         $q->orWhere('email_category', 'LIKE', "%{$search}%");
+        //     });
+        // }
+        
+        // if ($request->sort_by) {
+            // $email_restrictions = $email_restrictions->orderBy($request->sort_by, $request->sort_order);
+        // } else {
+            $email_restrictions = $email_restrictions->orderBy('id', 'Desc');
+        // }
+        $email_restrictions_count = $email_restrictions->count();
+        $email_restrictions = $email_restrictions->paginate($per_page_record); 
+        return view('admin.sample-report-logs.pagination', compact('email_restrictions', 'request', 'email_restrictions_count'));	
+    }
     public function generatePresentation(Request $request)
     {
         // Create a new PHPPresentation instance
