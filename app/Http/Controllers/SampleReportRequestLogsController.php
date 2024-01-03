@@ -19,7 +19,9 @@ use PhpOffice\PhpPresentation\Shape\RichText;
 
 class SampleReportRequestLogsController extends Controller
 {
-    public function index(Request $request){}
+    public function index(Request $request){
+        return view('front.download-report.index');
+    }
     public function store(Request $request)
     {
         $user = base64_decode($request->input('user'));

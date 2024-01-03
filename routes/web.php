@@ -73,6 +73,7 @@ Route::get('/sample-report-page/{slug}', 'ReportController@sampleReportPage')->n
 // sample report request logs code start
 Route::post('/sample-report-logs-store', 'SampleReportRequestLogsController@store')->name('sample-report-logs-store');
 Route::get('/generate-ppt', 'SampleReportRequestLogsController@generatePresentation')->name('generate-ppt');
+Route::get('/download-ppt', 'SampleReportRequestLogsController@index')->name('download-ppt.index');
 
 /* Frontend User Auth Routes */
 Route::get('reset-password/{token}', 'HomeController@index')->middleware('guest')->name('password.reset');
