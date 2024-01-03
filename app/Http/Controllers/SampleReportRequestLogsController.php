@@ -8,6 +8,7 @@ use App\Models\ReportSampleRequest;
 use App\Models\SampleReportRequestLogs;
 use App\Models\User;
 use Carbon\Carbon;
+use App\Models\ReportSegment;
 use PhpOffice\PhpPresentation\PhpPresentation;
 // use PhpOffice\PhpPresentation\IOFactory;
 use PhpOffice\PhpPresentation\Style\Color;
@@ -158,6 +159,8 @@ class SampleReportRequestLogsController extends Controller
 
     public function downloadPPT(Request $request){
         $report = Report::find(63);
-        return view('front.download-report.index', compact('report'));
+        $segments = ReportSegment::where('report_id', $report->id)
+                    ->get()->pluck('value', 'name')->toArray();
+        return view('front.download-report.index', compact('report', 'segments'));
     }
 }
