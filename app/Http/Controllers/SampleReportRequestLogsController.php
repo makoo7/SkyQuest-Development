@@ -155,4 +155,9 @@ class SampleReportRequestLogsController extends Controller
 
         return 'Presentation generated successfully!';
     }
+
+    public function downloadPPT(Request $request){
+        $report = Report::find(63);
+        return view('front.download-report.index', compact('report'));
+    }
 }

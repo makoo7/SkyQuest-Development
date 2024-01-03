@@ -3,66 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML to PowerPoint</title>
-  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-  <script src="{{ asset("js/pptxgen.bundle.js") }}"></script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Download PPT</title>
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@3.12.0/libs/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@3.12.0/dist/pptxgen.min.js"></script>
 </head>
 <body>
-  <!-- Your HTML content here -->
+
 <script>
-// Wait for the Office API to be ready
-Office.onReady(function (info) {
-  if (info.host === Office.HostType.PowerPoint) {
-    // Office is ready
-    document.getElementById("run").onclick = convertToPPT;
-  }
-});
+// Create a new PowerPoint presentation
+var pptx = new PptxGenJS();
 
-function convertToPPT() {
-  // Get HTML content from your pages
-  const htmlContent = getCombinedHTML(); // Implement your logic to combine HTML pages
+  // Add a slide with a title and content
+var slide = pptx.addSlide();
 
-  // Convert HTML to PowerPoint
-  htmlToPptx(htmlContent, {
-    output: "blob",
-  }).then((pptxBlob) => {
-    // Create PowerPoint document
-    Office.context.document.setSelectedDataAsync(pptxBlob, { coercionType: Office.CoercionType.Ooxml }, function (asyncResult) {
-      if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
-        console.log("HTML converted to PowerPoint successfully");
-      } else {
-        console.error("Error converting HTML to PowerPoint", asyncResult.error.message);
-      }
-    });
-  });
-}
+slide.background = { path: "{{ asset('assets/frontend/slide/1/1.svg') }}" };
 
-function getCombinedHTML() {
-    alert()
-  // Implement your logic to fetch and combine HTML pages
-  // For simplicity, let's assume you have a function that fetches HTML content from multiple pages
-  const page1 = fetchHTMLPage("page1.html");
-  const page2 = fetchHTMLPage("page2.html");
-  // Combine HTML content
-  const combinedHTML = page1 + page2;
-  return combinedHTML;
-}
+slide.addText('Hello, PowerPoint!', { x:1, y:1, fontSize:18, color:'363636' });
+slide.addText('This is a slide created using pptxgenjs.', { x:1, y:2, fontSize:14, color:'757575' });
 
-function fetchHTMLPage(pageUrl) {
-  // Implement logic to fetch HTML content from a given URL
-  // You may use AJAX, Fetch API, or any other method
-  // For simplicity, let's assume a synchronous function for fetching HTML
-  return "";
-//   const xhr = new XMLHttpRequest();
-//   xhr.open("GET", pageUrl, false);
-//   xhr.send();
-//   if (xhr.status === 200) {
-//     return xhr.responseText;
-//   } else {
-//     console.error("Error fetching HTML from " + pageUrl);
-//     return "";
-//   }
-}
+  // Add another slide
+var slide2 = pptx.addSlide();
+slide2.addText('Second Slide', { x:1, y:1, fontSize:18, color:'363636' });
+slide2.addText('Adding more content here.', { x:1, y:2, fontSize:14, color:'757575' });
+
+  // Save the presentation
+pptx.writeFile();
 </script>
+  
 </body>
 </html>

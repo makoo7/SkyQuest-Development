@@ -8,7 +8,7 @@
     @endphp
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
+        {{-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Download
           </a>
@@ -16,7 +16,7 @@
             <a class="dropdown-item" href="javascript:void(0);">Download As PPT</a>
             <a class="dropdown-item" href="javascript:void(0);">Download As PDF</a>
           </div>
-        </li>
+        </li> --}}
       </ul>
       <ul class="pagination justify-content-end">
         @if($prevRoute >= 1)
