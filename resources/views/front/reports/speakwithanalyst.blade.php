@@ -95,8 +95,16 @@
                             <div class="col-12">
                                 <input class="form-control" type="hidden" id="report_id" name="report_id" value="{!! $report->id !!}">
                             </div>
-                            <div class="form-inner col-12 mb-3">
-                                <input class="form-control" type="text" placeholder="Full Name*" name="name" id="name" @if(auth('web')->check() && isset(Auth::user()->user_name)) value="{{ Auth::user()->user_name }}" readonly @endif>
+                            <div class="form-inner col-6 mb-3">
+                                <input class="form-control" type="text" placeholder="First Name*" name="name" id="name" @if(auth('web')->check() && isset(Auth::user()->user_name)) value="{{ Auth::user()->user_name }}" readonly @endif>
+                                @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="form-inner col-6 mb-3">
+                                <input class="form-control" type="text" placeholder="Last Name*" name="lastname" id="lastname" @if(auth('web')->check() && isset(Auth::user()->lastname)) value="{{ Auth::user()->lastname }}" readonly @endif>
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

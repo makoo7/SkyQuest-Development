@@ -12,7 +12,7 @@ class ReportSubscribeNow extends Model
     protected $table = "report_subscribe_now";
 
     protected $fillable = [
-        'report_id', 'plan', 'name', 'email', 'phonecode', 'phone', 'linkedin_link', 'company_name', 'designation', 'country_id', 'message'
+        'report_id', 'plan', 'name', 'email', 'phonecode', 'phone', 'linkedin_link', 'company_name', 'designation', 'country_id', 'message', 'lastname'
     ];
 
     public function report()

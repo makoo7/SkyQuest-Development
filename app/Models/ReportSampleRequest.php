@@ -12,7 +12,7 @@ class ReportSampleRequest extends Model
     protected $table = "report_sample_request";
 
     protected $fillable = [
-        'report_id', 'name', 'email', 'phonecode', 'phone', 'linkedin_link', 'company_name', 'designation', 'country_id', 'message', 'ip_address'
+        'report_id', 'name', 'email', 'phonecode', 'phone', 'linkedin_link', 'company_name', 'designation', 'country_id', 'message', 'ip_address', 'lastname'
     ];
 
     public function report()

@@ -17,6 +17,11 @@ $("#frmsubscribenow").validate({
             minlength: 3,
             validateTextField: true
         },
+        lastname: {
+            required: true,
+            minlength: 3,
+            validateTextField: true
+        },
         email: {
             required: true,
             email: true,
@@ -64,9 +69,14 @@ $("#frmsubscribenow").validate({
             required: "Please provide a plan",
         },
         name: {
-            required: "Please provide a full name",
+            required: "Please provide a first name",
             minlength: "Please insert at least 3 letters",
-            validateTextField: "Please enter a valid full name",
+            validateTextField: "Please enter a valid first name",
+        },
+        lastname: {
+            required: "Please provide a last name",
+            minlength: "Please insert at least 3 letters",
+            validateTextField: "Please enter a valid last name",
         },
         email: {
             required: "Please provide an email address",

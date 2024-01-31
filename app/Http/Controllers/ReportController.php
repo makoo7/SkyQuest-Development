@@ -969,9 +969,9 @@ class ReportController extends Controller
 
     public function saverequestSample(Request $request)
     {
-        dd($request->all());
         $request->validate([
             'name' => ['required', new ScriptPreventRule()],
+            'lastname' => ['required', new ScriptPreventRule()],
             'email' => 'required|email:filter',
             'phonecode' => 'required',
             'phone' => 'required',
@@ -983,9 +983,9 @@ class ReportController extends Controller
             'g-recaptcha-response.required' => 'The captcha field is required.',
             'g-recaptcha-response.captcha' => 'Invalid captcha',
         ]);
-
+        
         $data = $request->except(['_token','hiddenRecaptcha']);
-                
+
         $phoneArr = explode(":",$data['phonecode']);
         $country_id = $phoneArr[0];
         $phonecode = $phoneArr[1];
@@ -995,6 +995,7 @@ class ReportController extends Controller
             $user = auth('web')->user();
             if($user){
                 $user_data = array('user_name' => $data['name'],
+                                'lastname' => $data['lastname'],
                                 'email' => $data['email'],
                                 'phone' => $phonecode.$data['phone'],
                                 'company_name' => $data['company_name']);
@@ -1118,6 +1119,7 @@ class ReportController extends Controller
     {
         $request->validate([
             'name' => ['required', new ScriptPreventRule()],
+            'lastname' => ['required', new ScriptPreventRule()],
             'email' => 'required|email:filter',
             'phonecode' => 'required',
             'phone' => 'required',
@@ -1142,6 +1144,7 @@ class ReportController extends Controller
             $user = auth('web')->user();
             if($user){
                 $user_data = array('user_name' => $data['name'],
+                                'lastname' => $data['lastname'],
                                 'email' => $data['email'],
                                 'phone' => $phonecode.$data['phone'],
                                 'company_name' => $data['company_name']);
@@ -1267,6 +1270,7 @@ class ReportController extends Controller
         $request->validate([
             'plan' => 'required',
             'name' => ['required', new ScriptPreventRule()],
+            'lastname' => ['required', new ScriptPreventRule()],
             'email' => 'required|email:filter',
             'phonecode' => 'required',
             'phone' => 'required',
@@ -1290,6 +1294,7 @@ class ReportController extends Controller
             $user = auth('web')->user();
             if($user){
                 $user_data = array('user_name' => $data['name'],
+                                'lastname' => $data['lastname'],
                                 'email' => $data['email'],
                                 'phone' => $data['phonecode'].$data['phone'],
                                 'company_name' => $data['company_name']);
