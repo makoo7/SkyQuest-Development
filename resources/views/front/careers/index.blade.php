@@ -1,4 +1,18 @@
 @extends('front.layouts.app')
+<style>
+    div.kh-accordion-title span, a.kh-job-container span{
+        width: auto !important;
+    }
+    a.kh-job-container:hover.kh-job-card {
+        color: var(--themeBlue);
+    }
+    a.kh-job-container:hover .kh-job-title, a.kh-job-container:hover .kh-icon{
+        color: rgba(var(--themeBlue), 1) !important;
+    }
+    a.kh-job-container:hover.kh-job-card{
+        border-color: rgba(var(--themeBlue), 1) !important;
+    }
+</style>
 @section('content')
 @include("front.layouts.navigation")
 <!-- SkyQuest Section start -->
@@ -19,8 +33,8 @@
     <div class="container">
         <div class="passion-inner">
             <h1>What is Your Passion?</h1>
-            <div class="passion-features row">
-                @foreach ($departments as $department)
+            <div class="passion-features">
+                {{-- @foreach ($departments as $department)
                 <div class="features-inner col-lg-4 col-sm-6">
                     <a href="{!! url('careers/'.$department->slug) !!}" class="inner">
                         <p>{!!$department->name!!}</p>
@@ -29,7 +43,12 @@
                         </span>
                     </a>
                 </div>
-                @endforeach
+                @endforeach --}}
+                <script>
+                window.khConfig = {identifier: 'fec1f5fc-ccbe-44b8-83e7-dc9ea25d516c',domain: 'https://skyquest.keka.com/careers/',targetContainer: '#khembedjobs'}
+                </script>
+                <script src='https://skyquest.keka.com/careers/api/embedjobs/js/fec1f5fc-ccbe-44b8-83e7-dc9ea25d516c' defer></script>
+                <div id='khembedjobs'></div>
             </div>
         </div>
     </div>

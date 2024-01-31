@@ -207,7 +207,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         var route = "{{ request()->root() }}";
         var currLocale = "{{ (request()->root() == config('app.domain_name_english')) ? 'en' : 'ja' }}";
     </script>
-    <script src="{!! asset('assets/frontend/js/utils-gl.js') !!}"></script>
+    {{-- <script src="{!! asset('assets/frontend/js/utils-gl.js') !!}"></script> --}}
     <script src="{!! asset('assets/frontend/js/common.js') !!}?v={!! time() !!}" async></script>
 
     @if(isset($resetForm) && $resetForm=='1')

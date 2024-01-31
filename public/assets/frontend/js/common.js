@@ -3,10 +3,10 @@ document.addEventListener("contextmenu", (e) => {
 }, false);
 
 document.addEventListener("keydown", (e) => {
-    if (e.ctrlKey || e.keyCode == 123) {
-        e.stopPropagation();
-        e.preventDefault();
-    }
+    // if (e.ctrlKey || e.keyCode == 123) {
+    //     e.stopPropagation();
+    //     e.preventDefault();
+    // }
 });
 
 $(document).bind("ajaxSend", function () {
