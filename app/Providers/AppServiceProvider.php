@@ -16,8 +16,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        \PhpOffice\PhpPresentation\Autoloader::register();
-        \PhpOffice\Common\Autoloader::register();
+        // \PhpOffice\PhpPresentation\Autoloader::register();
+        // \PhpOffice\Common\Autoloader::register();
     }
 
     /**
