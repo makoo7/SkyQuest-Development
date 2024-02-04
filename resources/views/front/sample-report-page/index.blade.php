@@ -73,6 +73,14 @@
         @include('front.sample-report-page.pages.page-29')
     @elseif($response['frame'] == "page-30")
         @include('front.sample-report-page.pages.page-30')
+    @elseif($response['frame'] == "page-31")
+        @include('front.sample-report-page.pages.page-31')
+    @elseif($response['frame'] == "page-32")
+        @include('front.sample-report-page.pages.page-32')
+    @elseif($response['frame'] == "page-33")
+        @include('front.sample-report-page.pages.page-33')
+    @elseif($response['frame'] == "page-34")
+        @include('front.sample-report-page.pages.page-34')
     @endif
     {{-- @include('front.sample-report-page.pages.content') --}}
     {{-- @include('front.sample-report-page.pages.thankyou') --}}

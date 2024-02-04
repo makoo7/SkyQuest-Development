@@ -403,5 +403,21 @@ function getPageResult($Obj, $page)
         $resp["frame"] = "page-30";
         $resp["data"] = ["title" => "4.2 INDUSTRY ANALYSIS - PORTERS 5 FORCE ANALYSIS", "name" => $Obj->name];
     }
+    else if($page == 31){
+        $resp["frame"] = "page-31";
+        $resp["data"] = ["title" => "MARKET DYNAMICS", "name" => $Obj->name];
+    }
+    else if($page == 32){
+        $resp["frame"] = "page-32";
+        $resp["data"] = ["title" => "MARKET DRIVERS & OPPORTUNITIES (1/3)", "name" => $Obj->name];
+    }
+    else if($page == 33){
+        $resp["frame"] = "page-33";
+        $resp["data"] = ["title" => "MARKET CHALLENGES (1/2)", "name" => $Obj->name];
+    }
+    else if($page == 34){
+        $resp["frame"] = "page-34";
+        $resp["data"] = ["title" => "", "name" => $Obj->name];
+    }
     return $resp;
 }

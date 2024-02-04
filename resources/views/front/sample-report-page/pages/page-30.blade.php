@@ -7,7 +7,7 @@
             <img src="{{ asset("assets/frontend/slide/2/img/1.jpg") }}" alt="logo" class="img-fluid" />
         </div>
     </div>
-    <div class="row content-height">
+    <div class="row content-height position-relative">
         <div class="col-md-3">
             <div class="card industry-analysis-card h-100">
                 <div class="card-header">
@@ -53,5 +53,6 @@
                 </div>
               </div>
         </div>
+        <h3 class="boxed-text boxed-text-centered">DETAILED ANALYSIS WILL BE PROVIDED WITH FULL REPORT</h3>
     </div>
 </div>

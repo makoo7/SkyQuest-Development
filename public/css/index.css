@@ -54,6 +54,18 @@
 .industry-analysis-card .card-body{background: #f2f2f2; height: 300px;}
 .competitive-card.industry-analysis-card .card-header{background: #d6d7db; padding: 5px 10px; text-align: left; color: #333;}
 .competitive-card.industry-analysis-card .card-body{height: 150px;}
+.boxed-text-centered{top: 50%; transform: translate(-50%, -50%); height: fit-content;}
+.industry-development-table.market-table thead{background: #c3c5be; color: #6C3CBF; text-align: center; border-top: none; border-bottom: none;}
+.industry-development-table.market-table tbody tr.orange-background td:nth-child(1),
+.industry-development-table.market-table tbody tr.orange-background td:nth-child(2){background: #ef754a; color: #fff;}
+.industry-development-table.market-table tbody tr.purple-background td:nth-child(1),
+.industry-development-table.market-table tbody tr.purple-background td:nth-child(2){background: #956d98; color: #fff;}
+.industry-development-table.market-table tbody tr.blue-background td:nth-child(1),
+.industry-development-table.market-table tbody tr.blue-background td:nth-child(2){background: #405c72; color: #fff;}
+.industry-development-table.market-table tbody tr.grey-background td:nth-child(1),
+.industry-development-table.market-table tbody tr.grey-background td:nth-child(2){background: #535353; color: #fff;}
+.industry-development-table.market-table tbody tr td{border-bottom: 1px solid #b5bab6; border-right: 1px solid #b5bab6; background: #fff;}
+
 
 /* Responsive Start */
 @media (max-width: 12000px) {
