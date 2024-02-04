@@ -371,5 +371,37 @@ function getPageResult($Obj, $page)
         $resp["frame"] = "page-22";
         $resp["data"] = ["title" => "2.6 QUALITY ASSURANCE PROCESS", "name" => $Obj->name];
     }
+    else if($page == 23){
+        $resp["frame"] = "page-23";
+        $resp["data"] = ["title" => "", "name" => $Obj->name];
+    }
+    else if($page == 24){
+        $resp["frame"] = "page-24";
+        $resp["data"] = ["title" => "3 EXECUTIVE SUMMARY (1/4)", "name" => $Obj->name];
+    }
+    else if($page == 25){
+        $resp["frame"] = "page-25";
+        $resp["data"] = ["title" => "3 EXECUTIVE SUMMARY (2/4)", "name" => $Obj->name];
+    }
+    else if($page == 26){
+        $resp["frame"] = "page-26";
+        $resp["data"] = ["title" => "3 EXECUTIVE SUMMARY (3/4)", "name" => $Obj->name];
+    }
+    else if($page == 27){
+        $resp["frame"] = "page-27";
+        $resp["data"] = ["title" => "3 EXECUTIVE SUMMARY (4/4)", "name" => $Obj->name];
+    }
+    else if($page == 28){
+        $resp["frame"] = "page-28";
+        $resp["data"] = ["title" => "", "name" => $Obj->name];
+    }
+    else if($page == 29){
+        $resp["frame"] = "page-29";
+        $resp["data"] = ["title" => "4.1 RECENT INDUSTRY DEVELOPMENTS", "name" => $Obj->name];
+    }
+    else if($page == 30){
+        $resp["frame"] = "page-30";
+        $resp["data"] = ["title" => "4.2 INDUSTRY ANALYSIS - PORTERS 5 FORCE ANALYSIS", "name" => $Obj->name];
+    }
     return $resp;
 }

@@ -1,9 +1,11 @@
+.height-100vh{height: 100vh;}
+.content-height{height: calc(100% - 90px);}
 .content-background{background: url("../assets/frontend/slide/2/2.svg") no-repeat center center /cover;}
 .text-container{padding: 15px 25px;}
 .page-title{position: relative; margin-bottom: 0; top: 0; left: 0; padding: 12px 25px;}
 .page-title::before{content: ''; position: absolute; top: 0; left: 0; background: #6C3CBF; width: 12px; height: 100%;}
 .box{border: 4px solid #6C3CBF; padding: 15px; position: relative; height: 100%;}
-.box-title{background: #fff; text-transform: uppercase; margin-bottom: 0; font-size: 20px; color: #6C3CBF; font-weight: 500;}
+.box-title{background: #fff; text-transform: uppercase; margin-bottom: 0; font-size: 18px; color: #6C3CBF; font-weight: 700;}
 .box-top-negative{margin-top: -35px; padding: 0 20px;}
 .box-green{border-color: #2AC5A7;}
 .box-green .box-title{color: #2AC5A7;}
@@ -23,3 +25,47 @@
 .box-step-text{color: #fff; text-transform: uppercase; font-size: 14px; margin-bottom: 0;}
 .step-list-main{list-style-type: none; padding-left: 0;}
 .step-list{padding: 10px 0; border-bottom: 1px solid #ccc;}
+.main-page{border: 20px solid #6C3CBF; height: 100vh;}
+.main-page .main-page-title-block{height: calc(100% - 30px);}
+.main-page .main-page-number{font-size: 12rem; color: #6C3CBF; font-weight: 600; display: block; margin-top: 40px;}
+.main-page .main-page-title{font-size: 36px; text-transform: uppercase; font-weight: 500;}
+.box-text{color: #000;}
+.list{list-style-type: none; padding-left: 0;}
+.list-items{position: relative; padding-left: 16px;}
+.list-items:before{content: ''; position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: url('../assets/frontend/images/right-arrow.png') no-repeat center center /cover; width: 10px; height: 10px;}
+.boxed-text{background-color: #6C3CBF; color: #fff; text-transform: uppercase; padding: 8px 2px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); font-size: 16px;}
+.chart-sample-text-box{position: absolute; background-color: #d9d9d9; padding: 5px 10px; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%;}
+.sample-title{text-transform: uppercase; font-size: 16px;}
+.sample-text{line-height: 1.7; font-size: 14px;}
+.grey-background{background: #f1f1f1; padding: 10px;}
+.grey-background .box-title{background: inherit;}
+.box-purple-background{background: #6C3CBF; color: #fff; font-size: 20px; padding: 5px 5px; border-radius: 5px;}
+.blur-chart{filter: blur(4px);}
+.hr-block .box-border{border-top: 1px solid #000; display: block; width: 100%; margin-bottom: 200px;}
+.industry-development-table thead{background: #6C3CBF; color: #fff; text-transform: uppercase; font-weight: 700; border-top: 1px solid #000; border-bottom: 1px solid #000; text-align: center;}
+.industry-development-table tbody{border-bottom: 1px solid #000;}
+.industry-development-table tbody .box-purple-background{border-radius: 0; font-size: 16px; padding: 10px 5px; display: inline-block; margin-bottom: 0;}
+.industry-development-table tbody tr:nth-child(odd){background: #e7e7e7;}
+.industry-development-table tr td, .industry-development-table tr th{padding: 20px 10px;}
+.industry-analysis-card .card-header{background: #92278f; color: #fff; font-size: 18px; font-weight: 600; text-align: center;}
+.industry-analysis-card.buyer-background .card-header{background: #9b57d3;}
+.industry-analysis-card.new-entry-background .card-header{background: #755dd9;}
+.industry-analysis-card.threat-substitute-background .card-header{background: #665eb8;}
+.industry-analysis-card .card-body{background: #f2f2f2; height: 300px;}
+.competitive-card.industry-analysis-card .card-header{background: #d6d7db; padding: 5px 10px; text-align: left; color: #333;}
+.competitive-card.industry-analysis-card .card-body{height: 150px;}
+
+/* Responsive Start */
+@media (max-width: 12000px) {
+    .hr-block .box-border{margin-bottom: 150px}
+}
+
+@media (max-width: 991px) {
+    .hr-block .box-border{margin-bottom: 100px}
+}
+
+@media (max-width: 480px) {
+    .industry-development-table tr td, .box-purple-background{font-size: 14px;}
+    .industry-development-table tr th, .industry-development-table tbody .box-purple-background{font-size: 12px;}
+}
+/* Responsive End */
