@@ -291,20 +291,24 @@ function getPageResult($Obj, $page)
         $resp["frame"] = $frame;
         $resp["data"] = ["name" => $Obj->name];
     }
-    else if($page == 2 || $page == 3){
+    else if($page == 2){
         $resp["frame"] = "dummy-content";
-        $resp["data"] = null;
+        $resp["data"] = ["name" => $Obj->name, "title" => "", "content" => [], "style" => "center"];
+    }
+    else if($page == 3){
+        $resp["frame"] = "dummy-content";
+        $resp["data"] = ["name" => $Obj->name, "title" => "FEW OF OUR CLIENTS", "content" => [], "style" => "center"];
     }
     else if($page == 4){
-        $resp["frame"] = "frame";
-        $resp["data"] = ["name" => $Obj->name, "title" => "TABLE OF CONTENTS", "content" => [], "style" => "center"];
+        $resp["frame"] = "page-4";
+        $resp["data"] = ["name" => $Obj->name, "title" => "", "content" => [], "style" => "center"];
     }
     else if($page == 5){
-        $resp["frame"] = "frame";
+        $resp["frame"] = "page-5";
         $resp["data"] = ["name" => $Obj->name, "title" => "TABLE OF CONTENTS", "content" => config('constants.TABLE_OF_CONTENTS_1'), "style" => "full"];
     }
     else if($page == 6){
-        $resp["frame"] = "frame";
+        $resp["frame"] = "page-6";
         $resp["data"] = ["name" => $Obj->name, "title" => "TABLE OF CONTENTS", "content" => config('constants.TABLE_OF_CONTENTS_2'), "style" => "full"];
     }
     else if($page == 7){
@@ -312,11 +316,11 @@ function getPageResult($Obj, $page)
         $resp["data"] = ["style" => ""];
     }
     else if($page == 8){
-        $resp["frame"] = "frame";
+        $resp["frame"] = "page-8";
         $resp["data"] = ["name" => "01", "title" => "INTRODUCTION", "content" => [], "style" => "center"];
     }
     else if($page == 9){
-        $resp["frame"] = "content";
+        $resp["frame"] = "page-9";
         $resp["data"] = ["title" => "1.1 OBJECTIVES OF THE STUDY", "content" => config('constants.OBJECTIVES_OF_THE_STUDY'), "style" => "full", "dData" => $Obj->name];
     }
     else if($page == 10){
@@ -336,12 +340,16 @@ function getPageResult($Obj, $page)
         $resp["data"] = ["title" => "1.4 KEY DATA POINTS COVERED IN THE REPORT", "content" => config('constants.KEY_DATA_POINTS_COVERED_IN_REPORT'), "style" => "full", "dData" => $Obj->name];
     }
     else if($page == 14){
-        $resp["frame"] = "frame";
-        $resp["data"] = ["name" => "02", "title" => "RESEARCH METHODOLOGY", "content" => [], "style" => "center"];
+        $resp["frame"] = "page-14";
+        $resp["data"] = ["title" => "2. RESEARCH METHODOLOGY", "content" => [], "style" => "center"];
     }
+    // else if($page == 15){
+    //     $resp["frame"] = "page-15";
+    //     $resp["data"] = ["name" => "2. RESEARCH METHODOLOGY", "content" => config('constants.KEY_DATA_POINTS_COVERED_IN_REPORT'), "style" => "full", "dData" => $Obj->name];
+    // }
     else if($page == 15){
         $resp["frame"] = "page-15";
-        $resp["data"] = ["name" => "2. RESEARCH METHODOLOGY", "content" => config('constants.KEY_DATA_POINTS_COVERED_IN_REPORT'), "style" => "full", "dData" => $Obj->name];
+        $resp["data"] = ["title" => "2. RESEARCH METHODOLOGY", "content" => [], "style" => "center"];
     }
     else if($page == 16){
         $resp["frame"] = "page-16";
@@ -352,11 +360,11 @@ function getPageResult($Obj, $page)
         $resp["data"] = ["title" => "2.2 PRIMARY RESEARCH", "content" => config('constants.PRIMARY_RESEARCH'), "style" => "full", "dData" => $Obj->name];
     }
     else if($page == 18){
-        $resp["frame"] = "content";
+        $resp["frame"] = "page-18";
         $resp["data"] = ["style" => "", "title" => "2.3 PRIMARY RESEARCH APPROACH & KEY RESPONDENTS"];
     }
     else if($page == 19){
-        $resp["frame"] = "content";
+        $resp["frame"] = "page-19";
         $resp["data"] = ["style" => "", "title" => "2.4 DATA TRIANGULATION & INSIGHT GENERATION"];
     }
     else if($page == 20){
@@ -418,6 +426,22 @@ function getPageResult($Obj, $page)
     else if($page == 34){
         $resp["frame"] = "page-34";
         $resp["data"] = ["title" => "", "name" => $Obj->name];
+    }
+    else if($page == 35){
+        $resp["frame"] = "page-35";
+        $resp["data"] = ["title" => "DEGREE OF COMPETITION (1/2)", "name" => $Obj->name];
+    }
+    else if($page == 36){
+        $resp["frame"] = "page-36";
+        $resp["data"] = ["title" => "MARKET ECOSYSTEM MAP, 2023", "name" => $Obj->name];
+    }
+    else if($page == 37){
+        $resp["frame"] = "page-37";
+        $resp["data"] = ["title" => "KEY SUCCESS FACTORS FOR THE MARKET", "name" => $Obj->name];
+    }
+    else if($page == 38){
+        $resp["frame"] = "page-38";
+        $resp["data"] = ["title" => "DEGREE OF COMPETITION", "name" => $Obj->name];
     }
     return $resp;
 }

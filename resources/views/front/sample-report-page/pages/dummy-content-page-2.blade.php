@@ -1,12 +1,75 @@
-<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
-<div id="pg2" style="-webkit-user-select: none;">
-    <object data="{{ asset('assets/frontend/slide/2/2-dummy.svg') }}" type="image/svg+xml" id="pdf2" style="-moz-transform:scale(1); z-index: 0;"></object>
-</div>
-
-<div class="text-container">
-    <span class="intro-frame page-2-title">ABOUT US </span>
-    <div class="intro-frame message-container">
-        <p class="page-2-message">Established in 2006, SkyQuest is a Global Market Intelligence, Innovation Management organization that connects innovation to new markets, networks &amp; collaborators for achieving Sustainable development Goals.</p>
+<div id="pg2Overlay" style="width:100%; height:100%; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2" class="content-background" style="-webkit-user-select: none;"></div>
+<div class="text-container height-100vh">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <p class="intro-frame page-title page-5-title-full">{{ $response["data"]["title"] }}</p>
+        <div>
+            <img src="{{ asset("assets/frontend/slide/2/img/1.jpg") }}" alt="logo" class="img-fluid" />
+        </div>
     </div>
-    <span class="intro-frame image-header-text">SOME OF OUR CLIENTS </span>
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="about-title">About Us</h3>
+            <p class="about-text">Established in 2006, SkyQuest is a Global Market Intelligence, Innovation Management organization that connects innovation to new markets, networks & collaborators for achieving Sustainable development Goals.</p>
+            <h4 class="about-sub-title mb-4">SOME OF OUR CLIENTS</h4>
+            <div class="about-clients-imgs">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="client-img">
+                            <img src="{{ asset("assets/frontend/slide/2/img/2.jpg") }}" alt="logo" class="img-fluid" style="height: 200px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="client-img">
+                            <img src="{{ asset("assets/frontend/slide/2/img/3.jpg") }}" alt="logo" class="img-fluid" style="height: 60px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="client-img">
+                            <img src="{{ asset("assets/frontend/slide/2/img/4.jpg") }}" alt="logo" class="img-fluid" style="height: 80px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="client-img">
+                            <img src="{{ asset("assets/frontend/slide/2/img/11.jpg") }}" alt="logo" class="img-fluid" style="height: 80px;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="client-img">
+                            <img src="{{ asset("assets/frontend/slide/2/img/5.jpg") }}" alt="logo" class="img-fluid" style="height: 200px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="client-img">
+                            <img src="{{ asset("assets/frontend/slide/2/img/6.jpg") }}" alt="logo" class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="client-img">
+                            <img src="{{ asset("assets/frontend/slide/2/img/7.png") }}" alt="logo" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="client-img">
+                            <img src="{{ asset("assets/frontend/slide/2/img/8.jpg") }}" alt="logo" class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="client-img">
+                            <img src="{{ asset("assets/frontend/slide/2/img/9.png") }}" alt="logo" class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="client-img">
+                            <img src="{{ asset("assets/frontend/slide/2/img/10.jpg") }}" alt="logo" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
