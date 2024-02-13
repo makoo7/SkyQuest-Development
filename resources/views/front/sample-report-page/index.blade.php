@@ -105,6 +105,42 @@
         @include('front.sample-report-page.pages.page-38')
     @elseif($response['frame'] == "page-39")
         @include('front.sample-report-page.pages.page-39')
+    @elseif($response['frame'] == "page-40")
+        @include('front.sample-report-page.pages.page-40')
+    @elseif($response['frame'] == "page-41")
+        @include('front.sample-report-page.pages.page-41')
+    @elseif($response['frame'] == "page-42")
+        @include('front.sample-report-page.pages.page-42')
+    @elseif($response['frame'] == "page-43")
+        @include('front.sample-report-page.pages.page-43')
+    @elseif($response['frame'] == "page-44")
+        @include('front.sample-report-page.pages.page-44')
+    @elseif($response['frame'] == "page-45")
+        @include('front.sample-report-page.pages.page-45')
+    @elseif($response['frame'] == "page-46")
+        @include('front.sample-report-page.pages.page-46')
+    @elseif($response['frame'] == "page-47")
+        @include('front.sample-report-page.pages.page-47')
+    @elseif($response['frame'] == "page-48")
+        @include('front.sample-report-page.pages.page-48')
+    @elseif($response['frame'] == "page-49")
+        @include('front.sample-report-page.pages.page-49')
+    @elseif($response['frame'] == "page-50")
+        @include('front.sample-report-page.pages.page-50')
+    @elseif($response['frame'] == "page-51")
+        @include('front.sample-report-page.pages.page-51')
+    @elseif($response['frame'] == "page-52")
+        @include('front.sample-report-page.pages.page-52')
+    @elseif($response['frame'] == "page-53")
+        @include('front.sample-report-page.pages.page-53')
+    @elseif($response['frame'] == "page-54")
+        @include('front.sample-report-page.pages.page-54')
+    @elseif($response['frame'] == "page-55")
+        @include('front.sample-report-page.pages.page-55')
+    @elseif($response['frame'] == "page-56")
+        @include('front.sample-report-page.pages.page-56')
+    @elseif($response['frame'] == "page-57")
+        @include('front.sample-report-page.pages.page-57')
     @endif
     {{-- @include('front.sample-report-page.pages.content') --}}
     {{-- @include('front.sample-report-page.pages.thankyou') --}}
@@ -119,6 +155,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <!-- Chart js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -444,5 +482,404 @@
     })
 </script>
 
+<!-- Slide 41 Mixed chart -->
+<script>
+    var ctx7 = document.getElementById("price-spectrum-chart");
+    var ctx7 = new Chart(ctx7, {
+        type: 'scatter',
+        data: {
+            labels: ["Global", "North America", "Europe", "Asia Pacific", "Middle East & Africa", "Latin America"],
+            datasets: [{
+                type: 'bar',
+                label: 'SUB SEGMENT 2',
+                data: [50, 60, 70, 80, 90, 75],
+                borderWidth: 1,
+                backgroundColor: '#ed7d31',
+            },
+            {
+                type: 'line',
+                label: 'SUB SEGMENT 1',
+                data: [50, 60, 70, 80, 90, 85],
+                borderWidth: 1,
+                backgroundColor: '#6c3cbf',
+                borderColor: 'rgb(54, 162, 235)'
+            },
+            {
+                type: 'line',
+                label: 'SUB SEGMENT 2',
+                data: [40, 50, 90, 85, 60, 65],
+                borderWidth: 1,
+                backgroundColor: '#6c3cbf',
+                borderColor: '#7030a0'
+            }
+            ]},
+        options: {
+            // rotation: -90,
+            circumference: 180,
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            tooltip: {
+                enabled: false
+            },
+            cutoutPercentage: 25
+        }
+    })
+</script>
+
+<!-- Slide 42 bar chart -->
+<script>
+    const ctx8 = document.getElementById('global-market-bar-chart');
+    new Chart(ctx8, {
+    type: 'bar',
+    data: {
+        labels: ['2018', '2022', '2023', '2024', '2026', '2030'],
+        datasets: [{
+            label: 'SUB SEGMENT 2',
+            data: [10, 20, 30, 40, 60, 90],
+            borderWidth: 1,
+            backgroundColor: '#7030a0',
+        },
+    ]
+    },
+    options: {
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                grid: {
+                    display: false,
+                },
+            },
+        },
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom',
+            },
+        }
+    }
+    });
+</script>
+
+<!-- Slide 43 doughnut chart -->
+<script>
+    var ctx9 = document.getElementById("global-market-largest-chart");
+    var ctx9 = new Chart(ctx9, {
+        type: 'doughnut',
+        data: {
+            labels: ["Red", "Orange", "Green"],
+            datasets: [{
+                label: '# of Votes',
+                data: [65, 35],
+                backgroundColor: [
+                    '#7030a0',
+                    '#fff',
+                ],
+                borderColor: [
+                    '#7030a0',
+                    '#ccc',
+                ],
+                // borderWidth: 5
+            }]
+
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            tooltip: {
+                enabled: false
+            },
+            cutoutPercentage: 65
+        }
+    })
+
+    var ctx10 = document.getElementById("global-market-second-largest-chart");
+    var ctx10 = new Chart(ctx10, {
+        type: 'doughnut',
+        data: {
+            labels: [],
+            datasets: [{
+                label: '# of Votes',
+                data: [45, 55],
+                backgroundColor: [
+                    '#00b050',
+                    '#fff',
+                ],
+                borderColor: [
+                    '#00b050',
+                    '#ccc',
+                ],
+                // borderWidth: 5
+            }]
+
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            tooltip: {
+                enabled: false
+            },
+            cutoutPercentage: 85
+        }
+    })
+</script>
+
+<!-- Slide 46 bar chart -->
+<script>
+    const ctx11 = document.getElementById('region-market-size-bar-chart');
+    new Chart(ctx11, {
+    type: 'bar',
+    data: {
+        labels: ['2018', '2022', '2023', '2024', '2026', '2030'],
+        datasets: [{
+            label: 'Latin America',
+            data: [6, 8, 8, 10, 11, 12],
+            borderWidth: 1,
+            backgroundColor: '#4472c4',
+        },
+        {
+            label: 'Middle East & Africa',
+            data: [8, 12, 14, 18, 18, 22],
+            borderWidth: 1,
+            backgroundColor: '#ed7d31',
+        },
+        {
+            label: 'Asia Pacific',
+            data: [10, 20, 30, 40, 60, 90],
+            borderWidth: 1,
+            backgroundColor: '#a5a5a5',
+        },
+        {
+            label: 'Europe',
+            data: [10, 20, 30, 40, 60, 90],
+            borderWidth: 1,
+            backgroundColor: '#ffc000',
+        },
+        {
+            label: 'North America',
+            data: [10, 20, 30, 40, 60, 90],
+            borderWidth: 1,
+            backgroundColor: '#7030a0',
+        },
+    ]
+    },
+    options: {
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                grid: {
+                    display: false,
+                },
+            },
+        },
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom',
+            },
+        }
+    }
+    });
+</script>
+
+<!-- Slide 50 doughnut chart -->
+<script>
+    var ctx12 = document.getElementById("revenue-share-geography");
+    var ctx12 = new Chart(ctx12, {
+        type: 'doughnut',
+        data: {
+            labels: ["North America", "Europe", "Asia Pacific", "MEA", "Latin America"],
+            datasets: [{
+                label: '# of Votes',
+                data: [35, 15, 25, 15, 10],
+                backgroundColor: [
+                    '#6c3cbf',
+                    '#ed7d31',
+                    '#a5a5a5',
+                    '#ffc000',
+                    '#2ac5a7'
+                ],
+                borderColor: [
+                    '#6c3cbf',
+                    '#ed7d31',
+                    '#a5a5a5',
+                    '#ffc000',
+                    '#2ac5a7'
+                ],
+                // borderWidth: 5
+            }]
+
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                }
+            },
+            tooltip: {
+                enabled: false
+            },
+            cutoutPercentage: 65
+        }
+    })
+</script>
+
+<!-- Slide 53 bar chart -->
+<script>
+    const ctx13 = document.getElementById('america-market-size');
+    new Chart(ctx13, {
+    type: 'bar',
+    data: {
+        labels: ['2020', '2021', '2022', '2023(e)', '2030(f)'],
+        datasets: [{
+            label: 'USA',
+            data: [40, 50, 60, 70, 80],
+            borderWidth: 1,
+            backgroundColor: '#7030a0',
+        },
+        {
+            label: 'Canada',
+            data: [10, 20, 30, 40, 50],
+            borderWidth: 1,
+            backgroundColor: '#ed7d31',
+        },
+    ]
+    },
+    options: {
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                grid: {
+                    display: false,
+                },
+            },
+        },
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom',
+            },
+        }
+    }
+    });
+</script>
+
+<!-- Slide 54 bar chart -->
+<script>
+    const ctx14 = document.getElementById('europe-market-size');
+    new Chart(ctx14, {
+    type: 'bar',
+    data: {
+        labels: ['2020', '2021', '2022', '2023(e)', '2030(f)'],
+        datasets: [{
+            label: 'UK',
+            data: [40, 50, 60, 70, 80],
+            borderWidth: 1,
+            backgroundColor: '#7030a0',
+        },
+        {
+            label: 'France',
+            data: [10, 20, 30, 40, 50],
+            borderWidth: 1,
+            backgroundColor: '#ed7d31',
+        },
+        {
+            label: 'Canada',
+            data: [30, 40, 60, 50, 70],
+            borderWidth: 1,
+            backgroundColor: '#a5a5a5',
+        },
+        {
+            label: 'Canada',
+            data: [20, 40, 30, 60, 50],
+            borderWidth: 1,
+            backgroundColor: '#ffc000',
+        },
+    ]
+    },
+    options: {
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                grid: {
+                    display: false,
+                },
+            },
+        },
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom',
+            },
+        }
+    }
+    });
+</script>
+
+<!-- Slide 50 doughnut chart -->
+<script>
+    var ctx15 = document.getElementById("market-share-analysis");
+    var ctx15 = new Chart(ctx15, {
+        type: 'doughnut',
+        data: {
+            labels: ["Player 1", "Player 2", "Player 3", "Player 4"],
+            datasets: [{
+                label: '# of Votes',
+                data: [35, 15, 25, 15, 10],
+                backgroundColor: [
+                    '#6c3cbf',
+                    '#ed7d31',
+                    '#a5a5a5',
+                    '#ffc000',
+                ],
+                borderColor: [
+                    '#6c3cbf',
+                    '#ed7d31',
+                    '#a5a5a5',
+                    '#ffc000',
+                ],
+                // borderWidth: 5
+            }]
+
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                }
+            },
+            tooltip: {
+                enabled: false
+            },
+            cutoutPercentage: 65
+        }
+    })
+</script>
 </body>
 </html>

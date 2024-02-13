@@ -443,5 +443,85 @@ function getPageResult($Obj, $page)
         $resp["frame"] = "page-38";
         $resp["data"] = ["title" => "DEGREE OF COMPETITION", "name" => $Obj->name];
     }
+    else if($page == 39){
+        $resp["frame"] = "page-39";
+        $resp["data"] = ["title" => "DEGREE OF COMPETITION", "name" => $Obj->name];
+    }
+    else if($page == 40){
+        $resp["frame"] = "page-40";
+        $resp["data"] = ["title" => "DEGREE OF COMPETITION", "name" => $Obj->name];
+    }
+    else if($page == 41){
+        $resp["frame"] = "page-41";
+        $resp["data"] = ["title" => "PRICING ANALYSIS", "name" => $Obj->name];
+    }
+    else if($page == 42){
+        $resp["frame"] = "page-42";
+        $resp["data"] = ["title" => "", "name" => $Obj->name];
+    }
+    else if($page == 43){
+        $resp["frame"] = "page-43";
+        $resp["data"] = ["title" => "GLOBAL MARKET SIZE", "name" => $Obj->name];
+    }
+    else if($page == 44){
+        $resp["frame"] = "page-44";
+        $resp["data"] = ["title" => "", "name" => $Obj->name];
+    }
+    else if($page == 45){
+        $resp["frame"] = "page-45";
+        $resp["data"] = ["title" => "GLOBAL MARKET SIZE BY REGION OVERVIEW", "name" => $Obj->name];
+    }
+    else if($page == 46){
+        $resp["frame"] = "page-46";
+        $resp["data"] = ["title" => "GLOBAL MARKET SIZE BY REGION", "name" => $Obj->name];
+    }
+    else if($page == 47){
+        $resp["frame"] = "page-47";
+        $resp["data"] = ["title" => "GLOBAL MARKET SIZE BY SEGMENT", "name" => $Obj->name];
+    }
+    else if($page == 48){
+        $resp["frame"] = "page-48";
+        $resp["data"] = ["title" => "GLOBAL MARKET SIZE BY REGION KEY TAKEAWAYS", "name" => $Obj->name];
+    }
+    else if($page == 49){
+        $resp["frame"] = "page-49";
+        $resp["data"] = ["title" => "", "name" => $Obj->name];
+    }
+    else if($page == 50){
+        $resp["frame"] = "page-50";
+        $resp["data"] = ["title" => "MARKET SIZE BY GEOGRAPHY", "name" => $Obj->name];
+    }
+    else if($page == 51){
+        $resp["frame"] = "page-51";
+        $resp["data"] = ["title" => "GLOBAL MARKET SIZE BY REGION KEY TAKEAWAYS", "name" => $Obj->name];
+    }
+    else if($page == 52){
+        $resp["frame"] = "page-52";
+        $resp["data"] = ["title" => "", "name" => $Obj->name];
+    }
+    else if($page == 53){
+        $resp["frame"] = "page-53";
+        $resp["data"] = ["title" => "NORTH AMERICA MARKET SIZE BY COUNTRY", "name" => $Obj->name];
+    }
+    else if($page == 54){
+        $resp["frame"] = "page-54";
+        $resp["data"] = ["title" => "NORTH AMERICA MARKET SIZE BY COUNTRY", "name" => $Obj->name];
+    }
+    else if($page == 55){
+        $resp["frame"] = "page-55";
+        $resp["data"] = ["title" => "", "name" => $Obj->name];
+    }
+    else if($page == 56){
+        $resp["frame"] = "page-56";
+        $resp["data"] = ["title" => "MARKET SHARE ANALYSIS BY COMPANY", "name" => $Obj->name];
+    }
+    else if($page == 57){
+        $resp["frame"] = "page-57";
+        $resp["data"] = ["title" => "MARKET PLAYER MAPPING", "name" => $Obj->name];
+    }
+    else if($page == 58){
+        $resp["frame"] = "page-58";
+        $resp["data"] = ["title" => "MARKET PLAYER MAPPING", "name" => $Obj->name];
+    }
     return $resp;
 }
