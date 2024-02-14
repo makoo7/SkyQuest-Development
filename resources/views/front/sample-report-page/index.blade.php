@@ -141,6 +141,14 @@
         @include('front.sample-report-page.pages.page-56')
     @elseif($response['frame'] == "page-57")
         @include('front.sample-report-page.pages.page-57')
+    @elseif($response['frame'] == "page-58")
+        @include('front.sample-report-page.pages.page-58')
+    @elseif($response['frame'] == "page-59")
+        @include('front.sample-report-page.pages.page-59')
+    @elseif($response['frame'] == "page-60")
+        @include('front.sample-report-page.pages.page-60')
+    @elseif($response['frame'] == "page-61")
+        @include('front.sample-report-page.pages.page-61')
     @endif
     {{-- @include('front.sample-report-page.pages.content') --}}
     {{-- @include('front.sample-report-page.pages.thankyou') --}}
@@ -841,7 +849,7 @@
     });
 </script>
 
-<!-- Slide 50 doughnut chart -->
+<!-- Slide 56 doughnut chart -->
 <script>
     var ctx15 = document.getElementById("market-share-analysis");
     var ctx15 = new Chart(ctx15, {
@@ -880,6 +888,135 @@
             cutoutPercentage: 65
         }
     })
+</script>
+
+<!-- Slide 58 scatter chart -->
+<script>
+    const ctx16 = document.getElementById('prominent-player-scatter-chart');
+    new Chart(ctx16, {
+    type: 'scatter',
+    data: {
+        datasets: [
+            {
+                label: 'Dataset 1',
+                data: [{
+                    x: -10,
+                    y: 0
+                }, {
+                    x: 0,
+                    y: 10
+                }, {
+                    x: 10,
+                    y: 5
+                }, {
+                    x: 0.5,
+                    y: 5.5
+                }],
+                backgroundColor: [
+                    '#6c3cbf29',
+                    '#ed7d3129',
+                    '#a5a5a529',
+                    '#ffc00029',
+                ],
+                borderColor: [
+                    '#6c3cbf',
+                    '#ed7d31',
+                    '#a5a5a5',
+                    '#ffc000',
+                ],
+            },
+        ],
+    },
+    options: {
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Product Offering Strength',
+                    font: {
+                        size: 14,
+                        weight: 'bold',
+                    },
+                },
+                grid: {
+                    display: true,
+                },
+                ticks: {
+                    display: false
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Business Strength',
+                    font: {
+                        size: 14,
+                        weight: 'bold',
+                    },
+                },
+                grid: {
+                    display: true,
+                },
+                ticks: {
+                    display: false
+                }
+            },
+        },
+        plugins: {
+            legend: {
+                display: false,
+            }
+        }
+    }
+    });
+</script>
+
+<!-- Slide 59 Line chart -->
+<script>
+    const ctx17 = document.getElementById('vertical-line-chart');
+    new Chart(ctx17, {
+    type: 'line',
+    data: {
+        labels: ['0', '2', '4', '6', '8', '10'],
+        datasets: [{
+            label: '',
+            data: [5, 3, 5, 5.5, 4.2, 3],
+            borderWidth: 1,
+            backgroundColor: '#7030a0',
+        },
+    ]
+    },
+    options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            x: {
+                suggestedMin: 0,
+                suggestedMax: 10,
+                ticks: {
+                    stepSize: 2,
+                },
+                grid: {
+                    display: true,
+                },
+            },
+            y: {
+                ticks: {
+                    display: false,
+                },
+                grid: {
+                    display: true,
+                },
+            },
+        },
+        plugins: {
+            legend: {
+                display: false,
+            }
+        }
+    }
+    });
 </script>
 </body>
 </html>

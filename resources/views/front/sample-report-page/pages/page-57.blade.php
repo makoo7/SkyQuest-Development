@@ -8,8 +8,8 @@
         </div>
     </div>
     <div class="content-height">
-        <h6 class="purple-background p-2 mb-1 rounded-lg">Table 1: Market Overview, By segment name, 2018 to 2030 (VALUE USD Mn)</h6>
-        <table class="industry-development-table takeaway-table global-market-size-table w-100 text-center">
+        <h6 class="purple-background p-2 mb-1 rounded-lg">By Region</h6>
+        <table class="industry-development-table takeaway-table global-market-size-table font-weight-bold w-100 text-center">
             <!-- <thead>
                 <tr class="purple-background">
                     <th style="text-align: left" colspan="6">By Region</th>

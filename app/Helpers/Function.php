@@ -521,7 +521,19 @@ function getPageResult($Obj, $page)
     }
     else if($page == 58){
         $resp["frame"] = "page-58";
-        $resp["data"] = ["title" => "MARKET PLAYER MAPPING", "name" => $Obj->name];
+        $resp["data"] = ["title" => "MARKET POSITIONING OF KEY PLAYERS IN THE MARKET, 2023", "name" => $Obj->name];
+    }
+    else if($page == 59){
+        $resp["frame"] = "page-59";
+        $resp["data"] = ["title" => "INTENSITY OF COMPETITIVE RIVALRY", "name" => $Obj->name];
+    }
+    else if($page == 60){
+        $resp["frame"] = "page-60";
+        $resp["data"] = ["title" => "", "name" => $Obj->name];
+    }
+    else if($page == 61){
+        $resp["frame"] = "page-61";
+        $resp["data"] = ["title" => "FULL COMPANY NAME - COMPANY OVERVIEW", "name" => $Obj->name];
     }
     return $resp;
 }

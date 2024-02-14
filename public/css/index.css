@@ -82,6 +82,7 @@
 .contents-index-sub-list-inner-item{font-weight: 500; font-size: 16px; color: #000; text-transform: initial;}
 .purple-color{color: #6C3CBF; font-weight: 300;}
 .purple-background{background: #6C3CBF !important; color: #fff !important;}
+.dark-purple-background{background: #7030a0 !important; color: #fff !important;}
 .blue-background{background: #002060 !important; color: #fff !important;}
 .dark-grey-background{background: #d9d9d9;}
 .orange-background{background: #ed7d31 !important; color: #fff !important;}
@@ -139,6 +140,14 @@
 .data-hidden-text{position: absolute; top: 50%; display: inline-block; background: #d9d9d9; padding: 8px;}
 .industry-development-table.global-market-key-takeaway thead th{padding: 15px 0; background: #7030a0;}
 .industry-development-table.europe-geography-table thead th, .industry-development-table.europe-geography-table tbody td{padding: 10px 0;}
+.prominent-player-strength{display: grid; grid-template-columns: 1fr 1fr 1fr; justify-items: center;}
+.prominent-player-strength-text{font-weight: 500; margin-bottom: 0;}
+.vertical-text{position: absolute; transform: rotate(-90deg); bottom: 200px; left: -160px; width: 45%;}
+.company-overview-main .overview-card .card-body{height: 200px;}
+.company-overview-main .industry-development-table thead th, .company-overview-main .industry-development-table tbody td{padding: 10px 10px;}
+.company-overview-main .industry-development-table thead th:nth-child(1){font-size: 20px; background: #7030a0; color: fff; width: 50%;}
+.company-overview-main .industry-development-table thead th:nth-child(2){font-size: 14px; background: #fff; font-weight: 500; color: #000; width: 50%;}
+.company-overview-main .product-benchmark-body{height: 200px;}
 /* Responsive Start */
 @media (max-width: 12000px) {
     .hr-block .box-border{margin-bottom: 150px}
