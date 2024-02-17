@@ -149,6 +149,28 @@
         @include('front.sample-report-page.pages.page-60')
     @elseif($response['frame'] == "page-61")
         @include('front.sample-report-page.pages.page-61')
+    @elseif($response['frame'] == "page-62")
+        @include('front.sample-report-page.pages.page-62')
+    @elseif($response['frame'] == "page-63")
+        @include('front.sample-report-page.pages.page-63')
+    @elseif($response['frame'] == "page-64")
+        @include('front.sample-report-page.pages.page-64')
+    @elseif($response['frame'] == "page-65")
+        @include('front.sample-report-page.pages.page-65')
+    @elseif($response['frame'] == "page-66")
+        @include('front.sample-report-page.pages.page-66')
+    @elseif($response['frame'] == "page-67")
+        @include('front.sample-report-page.pages.page-67')
+    @elseif($response['frame'] == "page-68")
+        @include('front.sample-report-page.pages.page-68')
+    @elseif($response['frame'] == "page-69")
+        @include('front.sample-report-page.pages.page-69')
+    @elseif($response['frame'] == "page-70")
+        @include('front.sample-report-page.pages.page-70')
+    @elseif($response['frame'] == "page-71")
+        @include('front.sample-report-page.pages.page-71')
+    @elseif($response['frame'] == "page-72")
+        @include('front.sample-report-page.pages.page-72')
     @endif
     {{-- @include('front.sample-report-page.pages.content') --}}
     {{-- @include('front.sample-report-page.pages.thankyou') --}}
@@ -1017,6 +1039,257 @@
         }
     }
     });
+</script>
+
+<script>
+    const ctx18 = document.getElementById('recent-financial-chart');
+    new Chart(ctx18, {
+    type: 'bar',
+    data: {
+        labels: ['2020', '2021', '2022'],
+        datasets: [{
+            label: '',
+            data: [60, 30, 50],
+            borderWidth: 1,
+            backgroundColor: '#7030a0',
+        },
+    ]
+    },
+    options: {
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                suggestedMin: 0,
+                suggestedMax: 100,
+                ticks: {
+                    display: false,
+                },
+                grid: {
+                    display: false,
+                },
+            },
+        },
+        plugins: {
+            legend: {
+                display: false,
+                position: 'bottom',
+            },
+        }
+    }
+    });
+</script>
+
+<script>
+    const ctx19 = document.getElementById('business-revenue-chart');
+    new Chart(ctx19, {
+    type: 'pie',
+    data: {
+        labels: [
+            'Segment 1',
+            'Segment 2',
+            'Segment 3',
+            'Segment 4',
+            'Segment 5',
+        ],
+        datasets: [{
+            label: [
+                'Segment 1',
+                'Segment 2',
+                'Segment 3',
+                'Segment 4',
+                'Segment 5',
+            ],
+            data: [54, 21, 9, 8, 8],
+            backgroundColor: [
+                '#7030a0',
+                '#ffc000',
+                '#002060',
+                '#cc6600',
+                '#548235',
+            ],
+            hoverOffset: 4
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRation: false,
+        scales: {
+            x: {
+                ticks: {
+                    display: false,
+                },
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                suggestedMin: 0,
+                suggestedMax: 100,
+                ticks: {
+                    display: false,
+                },
+                grid: {
+                    display: false,
+                },
+            },
+        },
+        plugins: {
+            legend: {
+                display: true,
+                position: 'right',
+            },
+        }
+    }
+    });
+</script>
+
+<!-- Slide 70 doughnut chart -->
+<script>
+    var ctx15 = document.getElementById("why-sky-delivery");
+    var ctx15 = new Chart(ctx15, {
+        type: 'doughnut',
+        data: {
+            labels: ["data1", "data2"],
+            datasets: [{
+                label: '# of Votes',
+                data: [98, 2],
+                backgroundColor: [
+                    '#1b1464',
+                    '#6c3cbf',
+                ],
+                borderColor: [
+                    '#1b1464',
+                    '#6c3cbf',
+                ],
+                // borderWidth: 5
+            }]
+
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false,
+                    position: 'bottom'
+                }
+            },
+            tooltip: {
+                enabled: false
+            },
+            cutoutPercentage: 30,
+        }
+    })
+</script>
+
+<script>
+    var ctx15 = document.getElementById("why-sky-realization");
+    var ctx15 = new Chart(ctx15, {
+        type: 'doughnut',
+        data: {
+            labels: ["data1", "data2"],
+            datasets: [{
+                label: '# of Votes',
+                data: [88, 12],
+                backgroundColor: [
+                    '#1b1464',
+                    '#6c3cbf',
+                ],
+                borderColor: [
+                    '#1b1464',
+                    '#6c3cbf',
+                ],
+                // borderWidth: 5
+            }]
+
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false,
+                    position: 'bottom'
+                }
+            },
+            tooltip: {
+                enabled: false
+            },
+            cutoutPercentage: 65
+        }
+    })
+</script>
+
+<script>
+    var ctx15 = document.getElementById("why-sky-references");
+    var ctx15 = new Chart(ctx15, {
+        type: 'doughnut',
+        data: {
+            labels: ["data1", "data2"],
+            datasets: [{
+                label: '# of Votes',
+                data: [90, 10],
+                backgroundColor: [
+                    '#1b1464',
+                    '#6c3cbf',
+                ],
+                borderColor: [
+                    '#1b1464',
+                    '#6c3cbf',
+                ],
+                // borderWidth: 5
+            }]
+
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false,
+                    position: 'bottom'
+                }
+            },
+            tooltip: {
+                enabled: false
+            },
+            cutoutPercentage: 65
+        }
+    })
+</script>
+
+<script>
+    var ctx15 = document.getElementById("why-sky-repeat");
+    var ctx15 = new Chart(ctx15, {
+        type: 'doughnut',
+        data: {
+            labels: ["data1", "data2"],
+            datasets: [{
+                label: '# of Votes',
+                data: [85, 15],
+                backgroundColor: [
+                    '#1b1464',
+                    '#6c3cbf',
+                ],
+                borderColor: [
+                    '#1b1464',
+                    '#6c3cbf',
+                ],
+                // borderWidth: 5
+            }]
+
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false,
+                    position: 'bottom'
+                }
+            },
+            tooltip: {
+                enabled: false
+            },
+            cutoutPercentage: 65
+        }
+    })
 </script>
 </body>
 </html>

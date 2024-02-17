@@ -1,7 +1,7 @@
 .height-100vh{height: 100vh;}
 .content-height{height: calc(100% - 90px);}
 .content-background{background: url("../assets/frontend/slide/2/2.svg") no-repeat center center /cover;}
-.text-container{padding: 15px 25px;}
+.text-container{padding: 15px 25px; overflow-x: hidden;}
 .page-title{position: relative; margin-bottom: 0; top: 0; left: 0; padding: 12px 25px;}
 .page-title::before{content: ''; position: absolute; top: 0; left: 0; background: #6C3CBF; width: 12px; height: 100%;}
 .box{border: 4px solid #6C3CBF; padding: 15px; position: relative; height: 100%;}
@@ -148,6 +148,31 @@
 .company-overview-main .industry-development-table thead th:nth-child(1){font-size: 20px; background: #7030a0; color: fff; width: 50%;}
 .company-overview-main .industry-development-table thead th:nth-child(2){font-size: 14px; background: #fff; font-weight: 500; color: #000; width: 50%;}
 .company-overview-main .product-benchmark-body{height: 200px;}
+.industry-development-table.full-company-key-development td{height: 100px}
+.recommendation-block{border: none; position: relative; flex-direction: row; justify-content: start; align-items: center;}
+.recommendation-block .recommendation-number{width: 120px; height: 120px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 0; z-index: 1;}
+.recommendation-body{background: #d9d9d9; height: 120px; width: 100%; flex: 1; margin-left: -60px; z-index: 0;}
+.recommendation-main .col-md-6:nth-child(n+3){margin-top: 30px;}
+.advantage-main{background: url('../assets/frontend/slide/67/1.png') no-repeat bottom right /contain; height: 100%; display: flex; align-items: center;}
+.advantage-main .advantage-title{font-size: 36px; font-weight: 700; text-transform: uppercase; position: relative; display: inline-block; padding-bottom: 10px; margin-left: 100px;}
+.advantage-main .advantage-title:after{content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: #ffc000;}
+.about-background{background: #1c1338; color: #fff; padding: 15px 25px; line-height: 1.3;}
+.about-background .about-head{font-size: 22px;}
+.about-background .about-text{font-size: 18px;}
+.about-background .about-head.about-number{font-size: 32px; font-weight: 700;}
+.about-background img{width: 40%;}
+.yellow-text{color: #f2ac3f;}
+.about-para{line-height: 1.8; font-size: 18px;}
+.ground-resource-block{display: flex; align-items: center; margin-bottom: 30px;}
+.ground-resource-block .ground-resource-title{font-size: 48px; font-weight: 700; margin-bottom: 0;}
+.ground-resource-block .ground-resource-text{font-weight: 500;}
+.why-sky-chart-title{text-transform: uppercase; font-weight: 700; margin-top: 20px;}
+.why-sky-boxed-text{position: static; padding: 10px; transform: translateX(0); line-height: 1.8; text-transform: none; font-weight: 400;}
+.corporate-clients-logo{display: grid; grid-template-columns: repeat(7, 1fr);}
+.corporate-clients-logo img{padding: 10px; width: 190px; height: 165px; object-fit: contain;}
+.note-bottom-details-block{border-top: 2px solid #000; margin-top: 60px; padding-top: 50px;}
+.note-bottom-details-block .note-text{font-weight: 600; line-height: 1.8; margin-top: 10px;}
+.row{margin: auto;}
 /* Responsive Start */
 @media (max-width: 12000px) {
     .hr-block .box-border{margin-bottom: 150px}

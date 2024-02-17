@@ -535,5 +535,49 @@ function getPageResult($Obj, $page)
         $resp["frame"] = "page-61";
         $resp["data"] = ["title" => "FULL COMPANY NAME - COMPANY OVERVIEW", "name" => $Obj->name];
     }
+    else if($page == 62){
+        $resp["frame"] = "page-62";
+        $resp["data"] = ["title" => "FULL COMPANY NAME - KEY DEVELOPMENTS", "name" => $Obj->name];
+    }
+    else if($page == 63){
+        $resp["frame"] = "page-63";
+        $resp["data"] = ["title" => "FULL COMPANY NAME", "name" => $Obj->name];
+    }
+    else if($page == 64){
+        $resp["frame"] = "page-64";
+        $resp["data"] = ["title" => "", "name" => $Obj->name];
+    }
+    else if($page == 65){
+        $resp["frame"] = "page-65";
+        $resp["data"] = ["title" => "RECOMMENDATIONS", "name" => $Obj->name];
+    }
+    else if($page == 66){
+        $resp["frame"] = "page-66";
+        $resp["data"] = ["title" => "CONCLUSION", "name" => $Obj->name];
+    }
+    else if($page == 67){
+        $resp["frame"] = "page-67";
+        $resp["data"] = ["title" => "", "name" => $Obj->name];
+    }
+    else if($page == 68){
+        $resp["frame"] = "page-68";
+        $resp["data"] = ["title" => "ABOUT US", "name" => $Obj->name];
+    }
+    else if($page == 69){
+        $resp["frame"] = "page-69";
+        $resp["data"] = ["title" => "GLOBAL ON GROUND RESOURCES", "name" => $Obj->name];
+    }
+    else if($page == 70){
+        $resp["frame"] = "page-70";
+        $resp["data"] = ["title" => "WHY SKYQUEST?", "name" => $Obj->name];
+    }
+    else if($page == 71){
+        $resp["frame"] = "page-71";
+        $resp["data"] = ["title" => "INDICATIVE LIST OF HAPPY CORPORATE CLIENTS", "name" => $Obj->name];
+    }
+    else if($page == 72){
+        $resp["frame"] = "page-72";
+        $resp["data"] = ["title" => "NOTE", "name" => $Obj->name];
+    }
     return $resp;
 }
