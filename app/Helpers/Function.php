@@ -323,16 +323,28 @@ function getPageResult($Obj, $page)
         $resp["frame"] = "page-9";
         $resp["data"] = ["title" => "1.1 OBJECTIVES OF THE STUDY", "content" => config('constants.OBJECTIVES_OF_THE_STUDY'), "style" => "full", "dData" => $Obj->name];
     }
+    // else if($page == 10){
+    //     $resp["frame"] = "flowchart-10";
+    //     $resp["data"] = ["title" => "1.2 GEOGRAPHIC SCOPE", "style" => "center", "dData" => $Obj->name];
+    // }
     else if($page == 10){
-        $resp["frame"] = "flowchart-10";
+        $resp["frame"] = "page-10";
         $resp["data"] = ["title" => "1.2 GEOGRAPHIC SCOPE", "style" => "center", "dData" => $Obj->name];
     }
+    // else if($page == 11){
+    //     $resp["frame"] = "flowchart-10";
+    //     $resp["data"] = ["title" => "1.3 MARKET SEGMENTAL SCOPE", "style" => "center", "dData" => $Obj->name];
+    // }
     else if($page == 11){
-        $resp["frame"] = "flowchart-10";
+        $resp["frame"] = "page-11";
         $resp["data"] = ["title" => "1.3 MARKET SEGMENTAL SCOPE", "style" => "center", "dData" => $Obj->name];
     }
+    // else if($page == 12){
+    //     $resp["frame"] = "flowchart-10";
+    //     $resp["data"] = ["title" => "1.3 MARKET SEGMENTAL SCOPE", "style" => "center", "dData" => $Obj->name];
+    // }
     else if($page == 12){
-        $resp["frame"] = "flowchart-10";
+        $resp["frame"] = "page-12";
         $resp["data"] = ["title" => "1.3 MARKET SEGMENTAL SCOPE", "style" => "center", "dData" => $Obj->name];
     }
     else if($page == 13){
@@ -577,6 +589,10 @@ function getPageResult($Obj, $page)
     }
     else if($page == 72){
         $resp["frame"] = "page-72";
+        $resp["data"] = ["title" => "NOTE", "name" => $Obj->name];
+    }
+    else if($page == 73){
+        $resp["frame"] = "page-73";
         $resp["data"] = ["title" => "NOTE", "name" => $Obj->name];
     }
     return $resp;

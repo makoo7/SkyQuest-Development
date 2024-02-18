@@ -49,8 +49,14 @@
         @include('front.sample-report-page.pages.page-9')
     @elseif($response['frame'] == "content")
         @include('front.sample-report-page.pages.content')
-    @elseif($response['frame'] == "flowchart-10")
-        @include('front.sample-report-page.pages.flowchart-10')
+    <!-- @elseif($response['frame'] == "flowchart-10")
+        @include('front.sample-report-page.pages.flowchart-10') -->
+    @elseif($response['frame'] == "page-10")
+        @include('front.sample-report-page.pages.page-10')
+    @elseif($response['frame'] == "page-11")
+        @include('front.sample-report-page.pages.page-11')
+    @elseif($response['frame'] == "page-12")
+        @include('front.sample-report-page.pages.page-12')
     @elseif($response['frame'] == "page-13")
         @include('front.sample-report-page.pages.page-13')
     @elseif($response['frame'] == "page-14")
@@ -171,6 +177,8 @@
         @include('front.sample-report-page.pages.page-71')
     @elseif($response['frame'] == "page-72")
         @include('front.sample-report-page.pages.page-72')
+    @elseif($response['frame'] == "page-73")
+        @include('front.sample-report-page.pages.page-73')
     @endif
     {{-- @include('front.sample-report-page.pages.content') --}}
     {{-- @include('front.sample-report-page.pages.thankyou') --}}
