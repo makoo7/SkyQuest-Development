@@ -13,7 +13,7 @@
                 <canvas id="semi-doughnut-chart"></canvas>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 mt-5 mt-md-0">
             <div class="hr-block h-100">
                 <span class="box-border"></span>
                 <span class="box-border"></span>

@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-12">
+            <div class="col-md-6 mt-4 mt-md-0 col-12">
                 <div class="card industry-analysis-card h-100">
                     <div class="card-header text-left purple-background">
                         <h5 class="card-head-text mb-0">FIGURE XX: BUSINESS REVENUE MIX, 2022</h5>
@@ -29,16 +29,16 @@
                     <div class="d-flex justify-content-center" style="height: 300px;"><canvas id="business-revenue-chart"></canvas></div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-12 mt-4">
-            <div class="card industry-analysis-card competitive-card">
-                <div class="card-header text-left purple-background">
-                    <h5 class="card-head-text mb-0">FIGURE XX: BUSINESS REVENUE MIX, 2022</h5>
+            <div class="col-md-12 mt-4">
+                <div class="card industry-analysis-card competitive-card">
+                    <div class="card-header text-left purple-background">
+                        <h5 class="card-head-text mb-0">FIGURE XX: BUSINESS REVENUE MIX, 2022</h5>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="boxed-text boxed-text-centered">DETAILED ANALYSIS WILL BE PROVIDED WITH FULL REPORT</h3>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <h3 class="boxed-text boxed-text-centered">DETAILED ANALYSIS WILL BE PROVIDED WITH FULL REPORT</h3>
-                </div>
-              </div>
+            </div>
         </div>
     </div>
 </div>

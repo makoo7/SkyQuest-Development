@@ -1,6 +1,6 @@
 <div id="pg2Overlay" style="width:100%; height:100%; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
 <div id="pg2" class="content-background" style="-webkit-user-select: none;"></div>
-<div class="text-container height-100vh p-0 overflow-hidden">
+<div class="text-container height-100vh p-0">
     <div class="row h-100">
         <div class="col-md-6 h-100">
             <div class="px-3 d-flex justify-content-between align-items-center mb-5">

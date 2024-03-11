@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="row content-height position-relative">
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-6 primary-approach-block">
             <div class="card industry-analysis-card primary-approach-main h-100">
                 <div class="card-body">
                     <h5 class="primary-approach-title text-center mb-3">EXECUTIVE LEVEL INTERVIEWS</h5>
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-6 primary-approach-block">
             <div class="card industry-analysis-card primary-approach-main h-100">
                 <div class="card-body">
                     <h5 class="primary-approach-title text-center mb-3">OPERATIONAL LEVEL INTERVIEWS</h5>
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-6 primary-approach-block">
             <div class="card industry-analysis-card primary-approach-main h-100">
                 <div class="card-body">
                     <h5 class="primary-approach-title text-center mb-3">INDUSTRY NEED SPECIFIC INTERVIEWS</h5>
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-6 primary-approach-block">
             <div class="card industry-analysis-card primary-approach-main h-100">
                 <div class="card-body">
                     <h5 class="primary-approach-title text-center mb-3">MARKET ECOSYSTEM INTERVIEWS</h5>

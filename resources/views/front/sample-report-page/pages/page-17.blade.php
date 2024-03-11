@@ -8,9 +8,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
-            <div class="d-flex align-items-center mb-4">
-                <h3 class="secondary-research-purple-box">Objective</h3>
+        <div class="col-lg-5 col-md-6">
+            <div class="d-flex mb-4">
+                <h3 class="secondary-research-purple-box d-flex align-items-center">Objective</h3>
                 <h4 class="secondary-research-grey-box">Gather first hand insights on the market studied</h4>
             </div>
             <div class="hypothesis-list">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-7 col-md-6">
             <ul class="list square-points hypothesis-list mb-0">
                 <li class="list-items data-point-list">At SkyQuest, we pool in industry experts across the value chain, to gather first-  hand insights on the market studied. In addition to these knowledgeable  industry veterans or retired experts, consultants and freelancers are a call away to  collaborate with SkyQuest on any assignment that requires real-time industry  insights.</li>
                 <li class="list-items data-point-list">We conduct paid primary to gather qualitative insights and opinion of a group of individuals related to the market.</li>
@@ -52,37 +52,37 @@
             </ul>
             <h5 class="secondary-research-list-title mt-5">MODES OF PRIMARY RESEARCH</h5>
         <div class="row">
-            <div class="col-lg-2 col-md-6 col-12">
+            <div class="col-xl-2 col-lg-4 col-6  research-mode-box pl-0 pr-2">
                 <div class="secondary-research-purple-box primary-research-modes-box">
                     <img src="{{ asset("assets/frontend/slide/17/1.png") }}" alt="logo" class="img-fluid" />
                     <h6>Telephonic Interviews</h6>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-12">
+            <div class="col-xl-2 col-lg-4 col-6  research-mode-box px-2">
                 <div class="secondary-research-purple-box primary-research-modes-box">
                     <img src="{{ asset("assets/frontend/slide/17/2.png") }}" alt="logo" class="img-fluid" />
                     <h6>Email Interviews</h6>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-12">
+            <div class="col-xl-2 col-lg-4 col-6  research-mode-box px-2">
                 <div class="secondary-research-purple-box primary-research-modes-box">
                     <img src="{{ asset("assets/frontend/slide/17/3.png") }}" alt="logo" class="img-fluid" />
                     <h6>Chat Interviews</h6>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-12">
+            <div class="col-xl-2 col-lg-4 col-6  research-mode-box px-2">
                 <div class="secondary-research-purple-box primary-research-modes-box">
                     <img src="{{ asset("assets/frontend/slide/17/4.png") }}" alt="logo" class="img-fluid" />
                     <h6>Industry Experts</h6>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-12">
+            <div class="col-xl-2 col-lg-4 col-6  research-mode-box px-2">
                 <div class="secondary-research-purple-box primary-research-modes-box">
                     <img src="{{ asset("assets/frontend/slide/17/5.png") }}" alt="logo" class="img-fluid" />
                     <h6>Surveys</h6>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-12">
+            <div class="col-xl-2 col-lg-4 col-6  research-mode-box pl-2 pr-0">
                 <div class="secondary-research-purple-box primary-research-modes-box">
                     <h6>& Others</h6>
                 </div>

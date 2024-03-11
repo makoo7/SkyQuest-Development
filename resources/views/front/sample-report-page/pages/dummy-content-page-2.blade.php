@@ -14,22 +14,22 @@
             <h4 class="about-sub-title mb-4">SOME OF OUR CLIENTS</h4>
             <div class="about-clients-imgs">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-6">
                         <div class="client-img">
                             <img src="{{ asset("assets/frontend/slide/2/img/2.jpg") }}" alt="logo" class="img-fluid" style="height: 200px;" />
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-6">
                         <div class="client-img">
                             <img src="{{ asset("assets/frontend/slide/2/img/3.jpg") }}" alt="logo" class="img-fluid" style="height: 60px;" />
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-6">
                         <div class="client-img">
                             <img src="{{ asset("assets/frontend/slide/2/img/4.jpg") }}" alt="logo" class="img-fluid" style="height: 80px;" />
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-6">
                         <div class="client-img">
                             <img src="{{ asset("assets/frontend/slide/2/img/11.jpg") }}" alt="logo" class="img-fluid" style="height: 80px;" />
                         </div>

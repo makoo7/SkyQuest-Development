@@ -21,11 +21,11 @@
                     <h6 class="box-title">HEADQUARTERS</h6>
                     <p class="note-text">1 Apache Way, Westford,<br />Massachusetts 01886,<br />United States</p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12 pl-0 pl-md-3">
                     <h6 class="box-title">APAC OFFICE</h6>
                     <p class="note-text">Room A & B, 2nd Floor, Lee Kee 3D<br />Building, 221-227, Queen’s Road<br />Central, Hong Kong</p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12 pr-0">
+                <div class="col-lg-4 col-md-6 col-12 pr-0 pl-0 pl-lg-3">
                     <h6 class="box-title">GLOBAL DELIVERY CENTER</h6>
                     <p class="note-text">B501 Krishna Complex, Opposite<br />Devashish Business Park, Bodakdev,<br />Ahmedabad, 380054, India</p>
                 </div>

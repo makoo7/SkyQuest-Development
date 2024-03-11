@@ -1,6 +1,6 @@
 <div id="pg2Overlay" style="width:100%; height:100%; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
 <div id="pg2" class="content-background" style="-webkit-user-select: none;"></div>
-<div class="text-container height-100vh">
+<div class="text-container">
     <div class="d-flex justify-content-between align-items-center mb-5">
         <p class="intro-frame page-title page-5-title-full">{{ $response["data"]["title"] }}</p>
         <div>
@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="content-height" style="position: relative;">
-        <h5 class="internal-slide-tag">Internal Slides</h5>
+        <h5 class="internal-slide-tag degree-competition-slide-box">Internal Slides</h5>
         <div class="competition-degree-block">
             <h3 class="box-title">Market Concentration Analysis:</h3>
             <p>In our analysis of the [Market Name], we have closely examined the level of market concentration. This metric is crucial for understanding the competitive dynamics within the industry. The Herfindahl-Hirschman Index (HHI) has been employed as a reliable measure to assess market concentration.</p>

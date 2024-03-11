@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 text-center">
+        <div class="col-md-6 mt-md-0 mt-4 text-center">
             <div class="grey-background">
                 <h3 class="box-title">GLOBAL MARKET SIZE BY GEOGRAPHY</h3>
                 <p class="chart-title-sub-text">in USD Million</p>

@@ -1,14 +1,14 @@
 <div id="pg2Overlay" style="width:100%; height:100%; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
 <div id="pg2" class="content-background" style="-webkit-user-select: none;"></div>
 <div class="text-container">
-    <div class="d-flex justify-content-between align-items-center mb-5">
+    <div class="logo-title-flexbox">
         <p class="intro-frame page-title page-5-title-full">{{ $response["data"]["title"] }}</p>
         <div>
             <img src="{{ asset("assets/frontend/slide/2/img/1.jpg") }}" alt="logo" class="img-fluid" />
         </div>
     </div>
-    <div class="top-block d-flex align-items-center">
-        <div class="img-block">
+    <div class="top-block d-flex">
+        <div class="img-block d-flex align-items-center justify-content-center">
             <img src="{{ asset("assets/frontend/slide/15/img/2.png") }}" alt="logo" class="img-fluid" />
         </div>
         <ul class="list square-points mb-0 ml-3">

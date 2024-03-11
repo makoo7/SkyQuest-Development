@@ -8,10 +8,11 @@
         </div>
     </div>
     <div class="content-height">
-    <div class="card industry-analysis-card competitive-card h-100">
-        <div class="card-header text-left purple-background py-2">
-            <h5 class="card-head-text mb-0">KEY TAKEAWAYS - REPORT NAME</h5>
+        <div class="card industry-analysis-card competitive-card h-100">
+            <div class="card-header text-left purple-background py-2">
+                <h5 class="card-head-text mb-0">KEY TAKEAWAYS - REPORT NAME</h5>
+            </div>
+            <div class="card-body h-100"></div>
         </div>
-        <div class="card-body h-100"></div>
     </div>
 </div>

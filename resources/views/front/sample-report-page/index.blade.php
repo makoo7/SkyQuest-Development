@@ -714,6 +714,8 @@
     ]
     },
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
             x: {
                 grid: {
@@ -906,6 +908,8 @@
 
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 legend: {
                     display: true,

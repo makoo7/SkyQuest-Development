@@ -22,11 +22,11 @@
     </div>
     <div class="mt-5">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <h4 class="box-title">MARKET SIZE ESTIMATION: BOTTOM-UP APPROACH</h4>
-                <div class="row no-gutters align-items-end">
-                    <div class="col-md-6">
-                        <img src="{{ asset("assets/frontend/slide/20/2.png") }}" alt="logo" class="img-fluid" />
+                <div class="row no-gutters mt-lg-0 mt-3">
+                    <div class="col-md-6 text-md-left text-center">
+                        <img src="{{ asset("assets/frontend/slide/20/2.png") }}" alt="logo" class="img-fluid market-growth-approach-img" />
                     </div>
                     <div class="col-md-6 market-size-estimation-btm">
                         <p class="market-size-estimation-text bottom-up-text"><span>report name</span> Market Size</p>
@@ -36,11 +36,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <h4 class="box-title">MARKET SIZE ESTIMATION: BOTTOM-UP APPROACH</h4>
-                <div class="row no-gutters">
-                    <div class="col-md-6">
-                        <img src="{{ asset("assets/frontend/slide/20/1.png") }}" alt="logo" class="img-fluid" />
+                <div class="row no-gutters mt-lg-0 mt-3">
+                    <div class="col-md-6 text-md-left text-center">
+                        <img src="{{ asset("assets/frontend/slide/20/1.png") }}" alt="logo" class="img-fluid market-growth-approach-img" />
                     </div>
                     <div class="col-md-6 mt-5">
                         <p class="market-size-estimation-text bottom-down-text"><span>report name</span> Market Size</p>

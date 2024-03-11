@@ -8,9 +8,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
-            <div class="d-flex align-items-center mb-4">
-                <h3 class="secondary-research-purple-box">Objective</h3>
+        <div class="col-xl-6 col-md-7 px-0 px-md-3">
+            <div class="d-flex align-items-normal mb-4">
+                <h3 class="secondary-research-purple-box d-flex align-items-center">Objective</h3>
                 <h4 class="secondary-research-grey-box">Hypothesis and insights building get factual data</h4>
             </div>
             <div class="hypothesis-list">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 fs-5">
+        <div class="col-xl-6 col-md-5 px-0 px-md-3 fs-5">
             <p>This phase involves a thorough synthesis of existing publications across the  web to gather meaningful insights on the current situation of the market,  technology developments, and any other market related information. The  sources include, but are not limited to:</p>
             <ul class="list square-points hypothesis-list mb-0 ml-3">
                 <li class="list-items data-point-list"><span class="secondary-research-list-title">Investor Presentations:</span> Investor presentations and earnings call transcripts from key players in the <span class="secondary-research-list-title">report name</span>, offering insights into their financial performance and strategic direction.</li>

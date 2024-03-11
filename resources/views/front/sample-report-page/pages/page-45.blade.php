@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center mt-md-0 mt-5">
                 <div style="height: 40vh;" class="d-flex justify-content-center">
                     <canvas id="global-market-second-largest-chart"></canvas>
                     <div class="global-mkt-chart-bottom-text">

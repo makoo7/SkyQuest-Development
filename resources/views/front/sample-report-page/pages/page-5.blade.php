@@ -1,7 +1,7 @@
 <div id="pg2Overlay" style="width:100%; height:100%; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
 <div id="pg2" class="content-background" style="-webkit-user-select: none;"></div>
 <div class="text-container main-page p-0">
-<div class="d-flex justify-content-start align-items-center mb-2">
+<div class="logo-title-flexbox mb-2">
         <p class="intro-frame page-title page-5-title-full page-5-head-text">{{ $response["data"]["title"] }}</p>
     </div>
     <div class="main-page-title-block two-columns">

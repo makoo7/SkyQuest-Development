@@ -1,6 +1,6 @@
 <div id="pg2Overlay" style="width:100%; height:100%; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
 <div id="pg2" class="content-background" style="-webkit-user-select: none;"></div>
-<div class="text-container">
+<div class="text-container geographic-segment-list-scrolling">
     <div class="d-flex justify-content-between align-items-center mb-5">
         <p class="intro-frame page-title page-5-title-full">{{ $response["data"]["title"] }}</p>
         <div>
@@ -8,7 +8,7 @@
         </div>
     </div>
     <div>
-        <div class="geographic-main-grid geographic-segment-scope">
+        <div class="geographic-main-grid geographic-segment-scope geographic-segment-list">
             <div>
                 <p class="geographic-box text-center">REPORT NAME MARKET</p>
             </div>

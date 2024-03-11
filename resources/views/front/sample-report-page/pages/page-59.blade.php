@@ -1,6 +1,6 @@
 <div id="pg2Overlay" style="width:100%; height:100%; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
 <div id="pg2" class="content-background" style="-webkit-user-select: none;"></div>
-<div class="text-container height-100vh">
+<div class="text-container">
     <div class="d-flex justify-content-between align-items-center mb-5">
         <p class="intro-frame page-title page-5-title-full">{{ $response["data"]["title"] }}</p>
         <div>
@@ -9,7 +9,7 @@
     </div>
     <div class="content-height">
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-6 col-12">
                 <h5 class="box-title mb-3">Factors</h5>
                 <ul class="p-0 list-unstyled">
                     <li class="mb-4">Sustainable Competitive advantage through innovation</li>
@@ -21,7 +21,7 @@
                     <li class="mb-4">Firm Concentration Ratio</li>
                 </ul>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6 col-12">
                 <h5 class="box-title mb-3">MARKET PARAMETERS</h5>
                 <div style="height: 500px;">
                     <canvas id="vertical-line-chart"></canvas>
@@ -31,9 +31,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6 col-12">
                 <h5 class="box-title mb-3">DETAILED DESCRIPTION</h5>
-                <h3 class="boxed-text boxed-text-centered">DETAILED ANALYSIS WILL BE PROVIDED WITH FULL REPORT</h3>
+                <h3 class="boxed-text boxed-text-centered competitive-rivalry-boxed-text">DETAILED ANALYSIS WILL BE PROVIDED WITH FULL REPORT</h3>
             </div>
         </div>
     </div>
